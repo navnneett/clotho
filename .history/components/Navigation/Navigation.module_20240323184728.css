@@ -1,7 +1,7 @@
 .appInfo {
     display: flex;
     flex-direction: row;
-    padding: 10px 10px 15px 10px;;
+    padding: 10px 10px 30px 10px;;
 }
 
 .appName {
@@ -12,7 +12,7 @@
 .userInfo {
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 .welcome {

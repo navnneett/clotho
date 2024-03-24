@@ -4,17 +4,15 @@ import MenuItem from '../MenuItem'
 
 export default function Navigation() {
     return(
-        <div className={styles.sideNav}>
+        <div className={styles.SideNav}>
             <div className={styles.appInfo}>
                 <Image src="/images/closet-space-app.png" alt="App Logo" width={100} height={100}/>
-                <p className={styles.appName}>Clotho</p>
+                <p>Clotho</p>
             </div>
-
             <div className={styles.userInfo}>
-                <Image src="/images/user.png" alt="User Image" width={50} height={50}/>
-                <p className={styles.welcome}>Welcome!</p>
+                <Image src="/images/user.png" alt="User Image" width={40} height={40}/>
+                <p>Welcome!</p>
             </div>
-
             <MenuItem title="My Profile"/>
             <MenuItem title="Calendar"/>
             <MenuItem title="Posts"/>
