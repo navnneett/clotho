@@ -11,8 +11,8 @@ export default function Navigation() {
             </div>
 
             <div className={styles.userInfo}>
-                <Image src="/images/user.png" alt="User Image" width={50} height={50}/>
-                <p className={styles.welcome}>Welcome!</p>
+                <Image src="/images/user.png" alt="User Image" width={40} height={40}/>
+                <p>Welcome!</p>
             </div>
 
             <MenuItem title="My Profile"/>

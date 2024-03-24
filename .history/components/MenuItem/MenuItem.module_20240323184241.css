@@ -1,6 +1,5 @@
 .items {
     font-size: var(--medium);
-    width: 200px;
+    width: 150px;
     padding: 15px;
-    padding-left: 30px;
 }
