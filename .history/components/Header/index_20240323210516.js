@@ -8,24 +8,14 @@ export default function Header(
     return (
         <header>
             <div className={styles.container}>
-                <div>
-                    <Image  src=""
-                            alt=""
-                            width={50}
-                            height={50}
-                            className={styles.userIcon}
-                    />
+                <div className={styles.userIcon}>
+                    <Image/>
                 </div>
                 <div className={styles.pageTitle}>
                     <p className={styles.text}>{title}</p>
                 </div>
                 <div className={styles.icon}>
-                    <Image  src=""
-                            alt=""
-                            width={50}
-                            height={50}
-                            className={styles.icon}
-                    />
+                    <Image/>
                 </div>
             </div>
         </header>
