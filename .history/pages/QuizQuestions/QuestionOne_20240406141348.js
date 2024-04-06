@@ -8,9 +8,8 @@ import Button from "@/components/Button";
 import ButtonTwo from "@/components/ButtonTwo";
 import Image from "next/image";
 
-
-
-
+// Dummy Result component for testing
+const Result = ({ result }) => <p>Result: {result}</p>;
 
 export default function QuestionOne() {
     const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -19,7 +18,7 @@ export default function QuestionOne() {
 
     const questionToAnswer = (answer) => {
         setSelectedAnswers([...selectedAnswers, answer]);
-    };
+    }
 
     const handleNextQuestion = () => {
         if (currentQuestion < 5) {
@@ -27,8 +26,65 @@ export default function QuestionOne() {
         } else {
             setQuizCompleted(true);
         }
-    };
+    }
 
+    const calculateResult = (selectedAnswers) => {
+        // Define the mapping of selected answers to result categories
+        const resultMapping = {
+            'A': {
+                'A': 'Casual Outfit',
+                'B': 'Trendy Outfit',
+                'C': 'Practical Outfit',
+                'D': 'Bohemian Outfit'
+            },
+            'B': {
+                'A': 'Comfortable Outfit',
+                'B': 'Stylish Outfit',
+                'C': 'Affordable Outfit',
+                'D': 'Durable Outfit'
+            },
+            'C': {
+                'A': 'Casual Event',
+                'B': 'Formal Event',
+                'C': 'Work Event',
+                'D': 'Outdoor Event'
+            },
+            'D': {
+                'A': 'Organized by Clothing Type',
+                'B': 'Organized by Occasion',
+                'C': 'Organized by Color',
+                'D': 'Organized by Season'
+            },
+            'E': {
+                'A': 'Fit',
+                'B': 'Color Matching',
+                'C': 'Style Selection',
+                'D': 'Comfort vs Fashion'
+            }
+        };
+    
+        // Initialize an empty result
+        let result = "";
+    
+        // Iterate over the selected answers and determine the result
+        for (let i = 0; i < selectedAnswers.length; i++) {
+            const question = String.fromCharCode(65 + i); // Convert index to letter A, B, C, D, E
+            const answer = selectedAnswers[i];
+    
+            // Check if the answer is valid
+            if (resultMapping[question] && resultMapping[question][answer]) {
+                // Concatenate the result for each question
+                result += `${resultMapping[question][answer]} `;
+            } else {
+                // Handle invalid answers
+                return "Invalid answer selected";
+            }
+        }
+    
+        // Return the final result
+        return result;
+    }
+    
 
     return (
         <>
@@ -62,23 +118,9 @@ export default function QuestionOne() {
                 </div>
             )}
 
-            {currentQuestion === 2 && (
-                <QuestionTwo onNextQuestion={handleNextQuestion} />
-            )}
-
-            {currentQuestion === 3 && (
-                <QuestionThree onNextQuestion={handleNextQuestion} />
-            )}
-
-            {currentQuestion === 4 && (
-                <QuestionFour onNextQuestion={handleNextQuestion} />
-            )}
-
-            {currentQuestion === 5 && (
-                <QuestionFive onNextQuestion={handleNextQuestion} />
-            )}
-            
-        
+            {/* Render other questions based on currentQuestion */}
+            {/* Include <Result /> component when quizCompleted */}
+            {quizCompleted && <Result result={calculateResult(selectedAnswers)} />}
         </>
     );
 }
