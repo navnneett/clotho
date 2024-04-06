@@ -25,36 +25,25 @@ export default function QuestionOne() {
         <>
             {currentQuestion === 1 && (
                 <div className={styles.mainContainer}>
-                <Image
-                    src="/images/quiz/Progress Indicator.png"
-                    alt="Progress Indicator question 1"
-                    width={430}
-                    height={10}
-                    className={styles.imageOne}
-                />
-                <div className={styles.contentContainer}>
-                    
+                    <Image
+                        src="/images/quiz/Progress Indicator.png"
+                        alt="Progress Indicator question 1"
+                        width={430} 
+                        height={10}
+                       
+                        className={styles.imageOne}
+                    />
                     <div className={styles.optionContainer}>
-                    <p className={styles.openSansText}>Which best describes your approach to fashion?</p>
-                        <div className={styles.optionRowOne}>
-                            <ButtonTwo onClick={() => questionToAnswer('A')} title="Option A" className={styles.optionRowInnerOne}/>
-                            <ButtonTwo onClick={() => questionToAnswer('B')} title="Option B" className={styles.optionRowInnerTwo}/>
-                        </div>
-                        <div className={styles.optionRowTwo}>
-                            <ButtonTwo onClick={() => questionToAnswer('C')} title="Option C" className={styles.optionRowInnerThree}/>
-                            <ButtonTwo onClick={() => questionToAnswer('D')} title="Option D" className={styles.optionRowInnerFour}/>
-                        </div>
-                   
-                        <div className={styles.nextButtonContainer}>
+                        <p>Which best describes your approach to fashion?</p>
+                        <ButtonTwo onClick={() => questionToAnswer('A')} title="Option A" />
+                        <ButtonTwo onClick={() => questionToAnswer('B')} title="Option B" />
+                        <ButtonTwo onClick={() => questionToAnswer('C')} title="Option C" />
+                        <ButtonTwo onClick={() => questionToAnswer('D')} title="Option D" />
                         {selectedAnswer !== null && (
                             <Button onClick={handleNextQuestion} title="Next" className={styles.nextButton} />
                         )}
-                        </div>
                     </div>
-                    
                 </div>
-                    </div>
-               
             )}
 
             {currentQuestion === 2 && <QuestionTwo onNextQuestion={handleNextQuestion} />}

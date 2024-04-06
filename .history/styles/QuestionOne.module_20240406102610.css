@@ -10,15 +10,6 @@
         
     }
 
-    .contentContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: calc(100vh - 20px); 
-        padding-bottom: 20px;
-    }
-
     .optionContainer {
         display: flex;
         flex-direction: column;
@@ -29,12 +20,11 @@
         
     }
 
-
-    .nextButtonContainer {
-        position: fixed;
-        bottom: calc(100vh - 820px);
-        left: 101px;
-     
+    .nextButton {
+        position: absolute;
+        bottom: 20px; 
+        left: 90%;
+        transform: translateX(-50%);
     }
 
     .imageOne {
@@ -45,32 +35,19 @@
         font-family: var(--open-sans-text);
         font-weight: var(--open-sans-weight);
         font-size: var(--open-sans-size);
-        padding: 40px 10px; 
-        margin: 30px 20px;
+        padding: 30px;
+        margin: 20px;
         text-align: center;
     }
 
-    .optionRowOne {
-        display: flex;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
+    .optionRowOne,
     .optionRowTwo {
         display: flex;
-        justify-content: center; 
-        margin-bottom: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-bottom: 20px;
     }
 
-    .optionRowInnerOne {
-        margin-right: 15px;
-    }
-
-    .optionRowInnerTwo {
-        margin-left: 15px;
-
+    .optionRowInnerLeft,
+    .optionRowInnerRight {
+        margin: 0 15px;
     }
 }

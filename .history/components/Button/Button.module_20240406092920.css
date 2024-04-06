@@ -1,12 +1,10 @@
 .button {
-    width: 227px; 
-    height: 60px; 
-    padding: 0;
+    padding: 12px 55px;
     font-size: 24px;
     background-color: var(--button-highlight-light);
     color: var(--white);
     border: none;
-    border-radius: 18px;
+    border-radius: 5px;
     cursor: pointer;
 }
 

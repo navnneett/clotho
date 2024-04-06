@@ -34,7 +34,7 @@
         position: fixed;
         bottom: calc(100vh - 820px);
         left: 101px;
-     
+        margin-top: 20px;
     }
 
     .imageOne {
