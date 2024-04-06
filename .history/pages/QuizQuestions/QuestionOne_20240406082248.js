@@ -6,7 +6,6 @@ import QuestionFour from "./QuestionFour";
 import QuestionFive from "./QuestionFive";
 import Button from "@/components/Button";
 import ButtonTwo from "@/components/ButtonTwo";
-import Image from "next/image";
 
 export default function QuestionOne() {
     const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -26,14 +25,6 @@ export default function QuestionOne() {
             {currentQuestion === 1 && (
                 <div className={styles.container}>
                     
-                    <div className={styles.imageOne}>
-                        <Image
-                        src="/images/quiz/Progress Indicator.png"
-                        alt="Progress Indicator question 1"
-                        width={430} 
-                        height={10}
-                        />
-                    </div>
                     <p>Which best describes your approach to fashion?</p>
                     <ButtonTwo onClick={() => questionToAnswer('A')}title="Option A"/>
                     <ButtonTwo onClick={() => questionToAnswer('B')}title="Option B"/>
@@ -46,9 +37,9 @@ export default function QuestionOne() {
             )}
 
             {currentQuestion === 2 && <QuestionTwo onNextQuestion={handleNextQuestion} />}
-            {currentQuestion === 3 && <QuestionThree onNextQuestion={handleNextQuestion}/>}
-            {currentQuestion === 4 && <QuestionFour onNextQuestion={handleNextQuestion}/>}
-            {currentQuestion === 5 && <QuestionFive onNextQuestion={handleNextQuestion}/>}
+            {currentQuestion === 3 && <QuestionThree onNextQuestion={handleNextQuestion} />}
+            {currentQuestion === 4 && <QuestionFour />}
+            {currentQuestion === 5 && <QuestionFive />}
         </>
     );
 }

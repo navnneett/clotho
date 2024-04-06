@@ -3,13 +3,12 @@
     
         
     .container {
+        display: w;
         align-items: center; 
         justify-content: center; 
         height: 100vh; 
-        background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
+        background-image: url('/images/Light Mode Low Opacity.png'); 
         background-size: cover; 
         background-position: center;
     }
-
-    
 }
