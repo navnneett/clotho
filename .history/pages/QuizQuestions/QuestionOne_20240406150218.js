@@ -7,27 +7,19 @@ import QuestionFive from "./QuestionFive";
 import Button from "@/components/Button";
 import ButtonTwo from "@/components/ButtonTwo";
 import Image from "next/image";
+import QuizEnd from "./QuizEnd";
 
 
 
 
-
-export default function QuestionOne() {
+export default function QuizContainer() {
     const [currentQuestion, setCurrentQuestion] = useState(1);
     const [selectedAnswers, setSelectedAnswers] = useState([]);
-    const [quizCompleted, setQuizCompleted] = useState(false);
 
-    const questionToAnswer = (answer) => {
+    const handleNextQuestion = (answer) => {
         setSelectedAnswers([...selectedAnswers, answer]);
-    };
-
-    const handleNextQuestion = () => {
-        if (currentQuestion < 5) {
-            setCurrentQuestion(currentQuestion + 1);
-        } else {
-            setQuizCompleted(true);
-        }
-    };
+        setCurrentQuestion(currentQuestion + 1);
+    }
 
 
     return (
@@ -62,23 +54,12 @@ export default function QuestionOne() {
                 </div>
             )}
 
-            {currentQuestion === 2 && (
-                <QuestionTwo onNextQuestion={handleNextQuestion} />
-            )}
+            {currentQuestion === 2 && <QuestionTwo onNextQuestion={handleNextQuestion} />}
+            {currentQuestion === 3 && <QuestionThree onNextQuestion={handleNextQuestion}/>}
+            {currentQuestion === 4 && <QuestionFour onNextQuestion={handleNextQuestion}/>}
+            {currentQuestion === 5 && <QuestionFive onNextQuestion={handleNextQuestion} />}
 
-            {currentQuestion === 3 && (
-                <QuestionThree onNextQuestion={handleNextQuestion} />
-            )}
-
-            {currentQuestion === 4 && (
-                <QuestionFour onNextQuestion={handleNextQuestion} />
-            )}
-
-            {currentQuestion === 5 && (
-                <QuestionFive onNextQuestion={handleNextQuestion} />
-            )}
-            
-        
+            {quizCompleted && <QuizEnd selectedAnswers={selectedAnswers} />}
         </>
     );
 }

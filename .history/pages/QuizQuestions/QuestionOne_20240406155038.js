@@ -7,7 +7,7 @@ import QuestionFive from "./QuestionFive";
 import Button from "@/components/Button";
 import ButtonTwo from "@/components/ButtonTwo";
 import Image from "next/image";
-
+import QuizEnd from "./QuizEnd";
 
 
 

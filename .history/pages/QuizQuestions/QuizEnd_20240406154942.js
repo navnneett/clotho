@@ -8,9 +8,9 @@ const QuizEnd = ({ selectedAnswers }) => {
     const calculateResult = (selectedAnswers) => {
         // Define the mapping of selected answers to result categories
         const resultMapping = {
-            'AAAAA': 'Classic',
-            'AAAAB': 'Trendy',
-            'AAAAC': 'Practical',
+            'AAAAA': 'Timeless and Classic, Comfort and Fit, Casual Outings with Friends, By Clothing Type, Finding the Right Fit',
+            'AAAAB': 'Timeless and Classic, Comfort and Fit, Casual Outings with Friends, By Clothing Type, Matching Colors and Patterns',
+            'AAAAC': 'Timeless and Classic, Comfort and Fit, Casual Outings with Friends, By Clothing Type, Deciding on the Right Style for the Occasion',
             // Add more mappings as needed
         };
 
@@ -23,7 +23,7 @@ const QuizEnd = ({ selectedAnswers }) => {
             return resultMapping[answerString];
         } else {
             // Handle cases where the answer combination is not found
-            return "Free-spirited";
+            return "No result found for selected answers";
         }
     };
 
@@ -32,7 +32,7 @@ const QuizEnd = ({ selectedAnswers }) => {
             <div className={styles.contentContainer}>
                 <h1>Congratulations</h1>
                 <p>Your Ideal Outfit Type is {calculateResult(selectedAnswers)}</p>
-                {/* Add mascot or other content here */}
+                {/* Add your mascot or other content here */}
 
                 <div className={styles.finishButtonContainer}>
                     <Link href={'/'}>

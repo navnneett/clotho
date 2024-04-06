@@ -7,7 +7,7 @@ import QuestionFive from "./QuestionFive";
 import Button from "@/components/Button";
 import ButtonTwo from "@/components/ButtonTwo";
 import Image from "next/image";
-
+import QuizEnd from "./QuizEnd";
 
 
 
@@ -77,8 +77,14 @@ export default function QuestionOne() {
             {currentQuestion === 5 && (
                 <QuestionFive onNextQuestion={handleNextQuestion} />
             )}
+
+            {currentQuestion ===  && (
+                <QuestionFive onNextQuestion={handleNextQuestion} />
+            )}
             
-        
+            {quizCompleted && (
+                <QuizEnd selectedAnswers={selectedAnswers} />
+            )}
         </>
     );
 }

@@ -8,9 +8,9 @@ const QuizEnd = ({ selectedAnswers }) => {
     const calculateResult = (selectedAnswers) => {
         // Define the mapping of selected answers to result categories
         const resultMapping = {
-            'AAAAA': 'Classic',
-            'AAAAB': 'Trendy',
-            'AAAAC': 'Practical',
+            'AAAAA': 'Timeless and Classic, Comfort and Fit, Casual Outings with Friends, By Clothing Type, Finding the Right Fit',
+            'AAAAB': 'Timeless and Classic, Comfort and Fit, Casual Outings with Friends, By Clothing Type, Matching Colors and Patterns',
+            'AAAAC': 'Timeless and Classic, Comfort and Fit, Casual Outings with Friends, By Clothing Type, Deciding on the Right Style for the Occasion',
             // Add more mappings as needed
         };
 
