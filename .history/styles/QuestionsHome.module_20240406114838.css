@@ -46,14 +46,4 @@
         text-align: center;
     }
 
-    .title {
-        font-family: var(--roboto-slab-text);
-        font-weight: var(--roboto-slab-weight);
-        font-size: var(--roboto-slab-size);
-        color: var(--black);
-        padding: 40px 10px; 
-        margin: 30px 20px;
-        text-align: center;
-    }
-
 }

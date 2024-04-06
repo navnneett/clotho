@@ -16,14 +16,9 @@
     --white: white;
     --light-gray: #B3B3B3;
 
-    /* Text styles */
     --open-sans-text: 'Open Sans', sans-serif;
     --open-sans-weight: 500; 
     --open-sans-size: 1.7rem;
-
-    --roboto-slab-text: 'Roboto Slab', serif;
-    --roboto-slab-weight: 600; 
-    --roboto-slab-size: 3rem;
 }
 
 html, 

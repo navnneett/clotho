@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import styles from "../../styles/QuestionFive.module.css";
+import styles from "../../styles/QuestionThree.module.css";
 import Button from "@/components/Button";
 import ButtonTwo from "@/components/ButtonTwo";
 import Image from "next/image";
 
-export default function QuestionFive({ onNextQuestion }) {
+export default function QuestionThree({ onNextQuestion }) {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
     const handleAnswerSelection = (answer) => {
@@ -17,13 +17,12 @@ export default function QuestionFive({ onNextQuestion }) {
 
     return (
         <>
-         <div className={styles.mainContainer}>
+                    <div className={styles.mainContainer}>
                     <Image
-                    src="/images/quiz/Progress Indicator-4.png"
-                    alt="Progress Indicator question 5"
+                    src="/images/quiz/Progress Indicator-2.png"
+                    alt="Progress Indicator question 3"
                     width={430} 
                     height={10}
-                    className={styles.imageOne}
                 />
                 <div className={styles.contentContainer}>
                     
@@ -47,6 +46,9 @@ export default function QuestionFive({ onNextQuestion }) {
                     
                 </div>
                     </div>
+               
+            
+            
         </>
     );
 }
