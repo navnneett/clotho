@@ -10,15 +10,6 @@
         
     }
 
-    .contentContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: calc(100vh - 20px); 
-        padding-bottom: 20px;
-    }
-
     .optionContainer {
         display: flex;
         flex-direction: column;
@@ -29,12 +20,11 @@
         
     }
 
-
-    .nextButtonContainer {
-        position: fixed;
-        bottom: calc(100vh - 820px);
-        left: 101px;
-     
+    .nextButton {
+        position: absolute;
+        top: calc(100vh - 20px); 
+        left: 101px; 
+        transform: translateX(-50%);
     }
 
     .imageOne {
@@ -45,8 +35,8 @@
         font-family: var(--open-sans-text);
         font-weight: var(--open-sans-weight);
         font-size: var(--open-sans-size);
-        padding: 40px 10px; 
-        margin: 30px 20px;
+        padding: 30px;
+        margin: 20px;
         text-align: center;
     }
 
@@ -65,11 +55,11 @@
         margin-right: 20px;
     }
 
-    .optionRowInnerOne {
+    .optionRowInnerLeft:not(:last-child) {
         margin-right: 15px;
     }
 
-    .optionRowInnerTwo {
+    .optionRowInnerRight:not(:last-child) {
         margin-left: 15px;
 
     }

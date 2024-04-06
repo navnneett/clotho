@@ -34,7 +34,6 @@
         position: fixed;
         bottom: calc(100vh - 820px);
         left: 101px;
-     
     }
 
     .imageOne {
@@ -45,8 +44,8 @@
         font-family: var(--open-sans-text);
         font-weight: var(--open-sans-weight);
         font-size: var(--open-sans-size);
-        padding: 40px 10px; 
-        margin: 30px 20px;
+        padding: 30px;
+        margin: 20px;
         text-align: center;
     }
 
@@ -65,7 +64,7 @@
         margin-right: 20px;
     }
 
-    .optionRowInnerOne {
+    .optionRowInnerOne:not(:last-child) {
         margin-right: 15px;
     }
 

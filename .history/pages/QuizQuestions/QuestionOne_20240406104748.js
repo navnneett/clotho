@@ -33,28 +33,23 @@ export default function QuestionOne() {
                     className={styles.imageOne}
                 />
                 <div className={styles.contentContainer}>
-                    
-                    <div className={styles.optionContainer}>
                     <p className={styles.openSansText}>Which best describes your approach to fashion?</p>
+                    <div className={styles.optionContainer}>
                         <div className={styles.optionRowOne}>
-                            <ButtonTwo onClick={() => questionToAnswer('A')} title="Option A" className={styles.optionRowInnerOne}/>
-                            <ButtonTwo onClick={() => questionToAnswer('B')} title="Option B" className={styles.optionRowInnerTwo}/>
+                            <ButtonTwo onClick={() => questionToAnswer('A')} title="Option A" className={styles.optionRowInnerLeft}/>
+                            <ButtonTwo onClick={() => questionToAnswer('B')} title="Option B" className={styles.optionRowInnerRight}/>
                         </div>
                         <div className={styles.optionRowTwo}>
-                            <ButtonTwo onClick={() => questionToAnswer('C')} title="Option C" className={styles.optionRowInnerThree}/>
-                            <ButtonTwo onClick={() => questionToAnswer('D')} title="Option D" className={styles.optionRowInnerFour}/>
-                        </div>
-                   
-                        <div className={styles.nextButtonContainer}>
-                        {selectedAnswer !== null && (
-                            <Button onClick={handleNextQuestion} title="Next" className={styles.nextButton} />
-                        )}
+                            <ButtonTwo onClick={() => questionToAnswer('C')} title="Option C" className={styles.optionRowInnerLeft}/>
+                            <ButtonTwo onClick={() => questionToAnswer('D')} title="Option D" className={styles.optionRowInnerRight}/>
                         </div>
                     </div>
-                    
                 </div>
-                    </div>
-               
+                {selectedAnswer !== null && (
+                    <Button onClick={handleNextQuestion} title="Next" className={styles.nextButton} />
+                )}
+            </div>
+            
             )}
 
             {currentQuestion === 2 && <QuestionTwo onNextQuestion={handleNextQuestion} />}
