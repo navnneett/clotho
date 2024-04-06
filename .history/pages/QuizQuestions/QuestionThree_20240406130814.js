@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import styles from "../../styles/QuestionFour.module.css";
+import styles from "../../styles/QuestionThree.module.css";
 import Button from "@/components/Button";
 import ButtonTwo from "@/components/ButtonTwo";
 import Image from "next/image";
 
-export default function QuestionFour({ onNextQuestion }) {
+export default function QuestionThree({ onNextQuestion }) {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
     const handleAnswerSelection = (answer) => {
@@ -17,10 +17,10 @@ export default function QuestionFour({ onNextQuestion }) {
 
     return (
         <>
-        <div className={styles.mainContainer}>
+                    <div className={styles.mainContainer}>
                     <Image
-                    src="/images/quiz/Progress Indicator-3.png"
-                    alt="Progress Indicator question 4"
+                    src="/images/quiz/Progress Indicator-2.png"
+                    alt="Progress Indicator question 3"
                     width={430} 
                     height={10}
                     className={styles.imageOne}
@@ -28,14 +28,14 @@ export default function QuestionFour({ onNextQuestion }) {
                 <div className={styles.contentContainer}>
                     
                     <div className={styles.optionContainer}>
-                    <p className={styles.openSansText}>How do you usually organize your wardrobe?</p>
+                    <p className={styles.openSansText}>What kind of events do you typically dress up for?</p>
                         <div className={styles.optionRowOne}>
-                            <ButtonTwo onClick={() => handleAnswerSelection('A')} title="By Clothing Type" className={styles.optionRowInnerOne}/>
-                            <ButtonTwo onClick={() => handleAnswerSelection('B')} title="By Occasion" className={styles.optionRowInnerTwo}/>
+                            <ButtonTwo onClick={() => handleAnswerSelection('A')} title="Casual Outings with Friends" className={styles.optionRowInnerOne}/>
+                            <ButtonTwo onClick={() => handleAnswerSelection('B')} title="Option B" className={styles.optionRowInnerTwo}/>
                         </div>
                         <div className={styles.optionRowTwo}>
-                            <ButtonTwo onClick={() => handleAnswerSelection('C')} title="By Color Coordination" className={styles.optionRowInnerThree}/>
-                            <ButtonTwo onClick={() => handleAnswerSelection('D')} title="By Season" className={styles.optionRowInnerFour}/>
+                            <ButtonTwo onClick={() => handleAnswerSelection('C')} title="Option C" className={styles.optionRowInnerThree}/>
+                            <ButtonTwo onClick={() => handleAnswerSelection('D')} title="Option D" className={styles.optionRowInnerFour}/>
                         </div>
                    
                         <div className={styles.nextButtonContainer}>
@@ -47,7 +47,9 @@ export default function QuestionFour({ onNextQuestion }) {
                     
                 </div>
                     </div>
-
+               
+            
+            
         </>
     );
 }
