@@ -20,13 +20,13 @@ export default function QuestionFour({ onNextQuestion }) {
         <div className={styles.container}>
 
         <div className={styles.imageOne}>
-            <Image
-                src="/images/quiz/Progress Indicator-3.png"
-                alt="Progress Indicator question 4"
-                width={430} 
-                height={10}
-            />
-        </div>
+                <Image
+                    src="/images/quiz/Progress Indicator-1.png"
+                    alt="Progress Indicator question 1"
+                    width={430} 
+                    height={10}
+                />
+            </div>
 
             
             <p>How do you usually organize your wardrobe?</p>
@@ -34,12 +34,11 @@ export default function QuestionFour({ onNextQuestion }) {
             <ButtonTwo onClick={() => handleAnswerSelection('B')}title="Option B"/>
             <ButtonTwo onClick={() => handleAnswerSelection('C')}title="Option C"/>
             <ButtonTwo onClick={() => handleAnswerSelection('D')}title="Option D"/>
-           
-            {selectedAnswer !== null && (
-                <Button onClick={handleNextQuestion}title="Next"/>
-            )}
         </div>
-
+        
+            {selectedAnswer !== null && (
+                 <Button onClick={handleNextQuestion}title="Next"/>
+            )}
         </>
     );
 }

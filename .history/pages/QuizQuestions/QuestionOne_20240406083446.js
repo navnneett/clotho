@@ -28,10 +28,11 @@ export default function QuestionOne() {
                     
                     <div className={styles.imageOne}>
                         <Image
-                        src="/images/quiz/Progress Indicator.png"
+                        src="/images/quiz/Progress Indicator-1.png"
                         alt="Progress Indicator question 1"
-                        width={430} 
-                        height={10}
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
                         />
                     </div>
                     <p>Which best describes your approach to fashion?</p>
@@ -46,9 +47,9 @@ export default function QuestionOne() {
             )}
 
             {currentQuestion === 2 && <QuestionTwo onNextQuestion={handleNextQuestion} />}
-            {currentQuestion === 3 && <QuestionThree onNextQuestion={handleNextQuestion}/>}
-            {currentQuestion === 4 && <QuestionFour onNextQuestion={handleNextQuestion}/>}
-            {currentQuestion === 5 && <QuestionFive onNextQuestion={handleNextQuestion}/>}
+            {currentQuestion === 3 && <QuestionThree onNextQuestion={handleNextQuestion} />}
+            {currentQuestion === 4 && <QuestionFour />}
+            {currentQuestion === 5 && <QuestionFive />}
         </>
     );
 }

@@ -28,7 +28,7 @@ export default function QuestionOne() {
                     
                     <div className={styles.imageOne}>
                         <Image
-                        src="/images/quiz/Progress Indicator.png"
+                        src="/images/quiz/Progress Indicator-1.png"
                         alt="Progress Indicator question 1"
                         width={430} 
                         height={10}

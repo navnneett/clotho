@@ -21,7 +21,7 @@ export default function QuestionFour({ onNextQuestion }) {
 
         <div className={styles.imageOne}>
             <Image
-                src="/images/quiz/Progress Indicator-3.png"
+                src="/images/quiz/Progress Indicator-4.png"
                 alt="Progress Indicator question 4"
                 width={430} 
                 height={10}
