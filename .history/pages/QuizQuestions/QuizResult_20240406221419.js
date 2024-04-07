@@ -12,7 +12,7 @@ export default function QuizResult() {
     return (
         <>
         <div>
-            <h2 className={styles.title}>Quiz Result</h2>
+            <h4 className={styles.title}>Quiz Result</h4>
             <h3 className={styles.title}>
                 Overall Fashion Styles:
                 <ul className={styles.result}>

@@ -32,7 +32,8 @@ export default function QuestionOne() {
                 <div className={styles.mainContainer}>
                     <h1>Fashion Trends Quiz</h1>
                     <h3>
-                        Question: 1/5
+                        Question: {currentQuestion}
+                        <span>/5</span>
                     </h3>
                     <Image
                         src="/images/quiz/Progress Indicator.png"

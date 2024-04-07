@@ -11,11 +11,11 @@ export default function QuizResult() {
 
     return (
         <>
-        <div>
-            <h2 className={styles.title}>Quiz Result</h2>
+        <div className={styles.result}>
+            <h4 className={styles.title}>Quiz Result</h4>
             <h3 className={styles.title}>
                 Overall Fashion Styles:
-                <ul className={styles.result}>
+                <ul>
                     {results.map((result, index) => (
                         <li key={index} className={styles.report}>
                             {Object.values(result)}
