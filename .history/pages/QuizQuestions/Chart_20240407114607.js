@@ -49,7 +49,7 @@ export default function Chart() {
     return(
         <>
         <div className={styles.mainContainer}>
-        <div className={styles.contentContainer}>
+       
         <h1 className={styles.title}>Your Fashion Profile</h1>
             <div className={styles.questionAnalysis}>
             
@@ -93,15 +93,12 @@ export default function Chart() {
                     <li className={styles.bulletPointShoes}>Incorporate personalized touches: custom monogramming, and handmade jewelry</li>
                 </ul>
             </div>
-            
-            </div>
-
             <div className={styles.buttonPosition}>
             <Link href={'/'}>
                 <Button title="Finish" />
             </Link>
             </div>
-            
+            </div>
             </div>
         </>
     )

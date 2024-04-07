@@ -30,6 +30,7 @@ export default function QuestionOne() {
         <>
             {currentQuestion === 1 && (
                 <div className={styles.mainContainer}>
+                    <h1>Fashion Trends Quiz</h1>
                     
                     <Image
                         src="/images/quiz/Progress Indicator.png"

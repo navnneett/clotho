@@ -93,15 +93,12 @@ export default function Chart() {
                     <li className={styles.bulletPointShoes}>Incorporate personalized touches: custom monogramming, and handmade jewelry</li>
                 </ul>
             </div>
-            
-            </div>
-
             <div className={styles.buttonPosition}>
             <Link href={'/'}>
                 <Button title="Finish" />
             </Link>
             </div>
-            
+            </div>
             </div>
         </>
     )
