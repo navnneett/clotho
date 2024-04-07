@@ -6,12 +6,14 @@
         background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
         background-size: cover; 
         background-position: center;
+        position: relative;
         margin-top: 0;
     }
 
     .contentContainer {
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     .questionAnalysis {
@@ -21,11 +23,10 @@
     .title {
         font-family: var(--roboto-slab-text);
         font-weight: var(--roboto-slab-weight);
+
         color: var(--black);
-        padding-left: 10px; 
-        padding-right: 10px; 
-        margin-left: 20px;
-        margin-right: 20px;
+        padding: 40px 10px; 
+        margin: 30px 20px;
         text-align: center;
     }
 

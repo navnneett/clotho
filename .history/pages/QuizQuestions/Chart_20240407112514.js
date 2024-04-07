@@ -49,10 +49,13 @@ export default function Chart() {
     return(
         <>
         <div className={styles.mainContainer}>
-        <div className={styles.contentContainer}>
-        <h1 className={styles.title}>Your Fashion Profile</h1>
+
+        
+
+            <h1 className={styles.title}>Your Fashion Profile</h1>
+
+            <div className={styles.contentContainer}>
             <div className={styles.questionAnalysis}>
-            
                 <div className={styles.chart}>
                     {isClient ? 
                         <RadialBarChart 
@@ -93,15 +96,12 @@ export default function Chart() {
                     <li className={styles.bulletPointShoes}>Incorporate personalized touches: custom monogramming, and handmade jewelry</li>
                 </ul>
             </div>
-            
-            </div>
-
             <div className={styles.buttonPosition}>
             <Link href={'/'}>
                 <Button title="Finish" />
             </Link>
             </div>
-            
+            </div>
             </div>
         </>
     )
