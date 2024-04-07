@@ -1,4 +1,3 @@
-import styles from "../../styles/QuizResult.module.css"
 export default function QuizResult() {
 
     const results = [
@@ -11,11 +10,10 @@ export default function QuizResult() {
 
     return (
         <>
-        <div>
-            <h2 className={styles.title}>Quiz Result</h2>
-            <h3 className={styles.title}>
+            <h4>Quiz Result</h4>
+            <h3>
                 Overall Fashion Styles:
-                <ul className={styles.result}>
+                <ul>
                     {results.map((result, index) => (
                         <li key={index} className={styles.report}>
                             {Object.values(result)}
@@ -23,7 +21,6 @@ export default function QuizResult() {
                     ))}
                 </ul>
             </h3>
-        </div>
         </>
     )
 }

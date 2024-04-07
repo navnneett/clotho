@@ -4,7 +4,6 @@ import Link from "next/link";
 import QuizResult from "./QuizResult";
 
 // QuizEnd component
-
 const QuizEnd = ({ selectedAnswers }) => {
     // Calculate the result based on the selected answers
     const calculateResult = (selectedAnswers) => {
@@ -34,7 +33,6 @@ const QuizEnd = ({ selectedAnswers }) => {
             <div className={styles.contentContainer}>
                 <h1>Congratulations</h1>
                 <p>Your Ideal Outfit Type is {calculateResult(selectedAnswers)}</p>
-                <QuizResult />
                 {/* Add mascot or other content here */}
 
                 <div className={styles.finishButtonContainer}>

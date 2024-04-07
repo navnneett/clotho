@@ -23,7 +23,8 @@ export default function QuestionFive({ onNextQuestion }) {
             {!isLastQuestion ? (
                 <div className={styles.mainContainer}>
                     <h3>
-                        Question: 5/5
+                        Question: 1
+                        <span>/5</span>
                     </h3>
                     <Image
                         src="/images/quiz/Progress Indicator-4.png"

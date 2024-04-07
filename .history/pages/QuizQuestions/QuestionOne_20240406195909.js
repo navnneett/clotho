@@ -31,8 +31,8 @@ export default function QuestionOne() {
             {currentQuestion === 1 && (
                 <div className={styles.mainContainer}>
                     <h1>Fashion Trends Quiz</h1>
-                    <h3>
-                        Question: 1/5
+                    <h3>Question 1
+                        
                     </h3>
                     <Image
                         src="/images/quiz/Progress Indicator.png"

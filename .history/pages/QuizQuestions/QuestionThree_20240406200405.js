@@ -19,7 +19,8 @@ export default function QuestionThree({ onNextQuestion }) {
         <>
                     <div className={styles.mainContainer}>
                     <h3>
-                        Question: 3/5
+                        Question: 1
+                        <span>/5</span>
                     </h3>
                     <Image
                     src="/images/quiz/Progress Indicator-2.png"
