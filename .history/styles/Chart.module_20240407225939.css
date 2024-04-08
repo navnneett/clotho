@@ -42,22 +42,22 @@
         font-family: var(--open-sans-text);
     }
 
-    .jean {
+    .bulletPointJean {
         list-style-type: '👖';
         padding-left: 10px;
     }
 
-    .dress {
+    .bulletPointDress {
         list-style-type: '👗';
         padding-left: 10px;
     }
 
-    .tShirt {
+    .bulletPointTShirt {
         list-style-type: '🧥';
         padding-left: 10px;
     }
 
-    .shoes {
+    .bulletPointShoes {
         list-style-type: '📿';
         padding-left: 10px;
     }
