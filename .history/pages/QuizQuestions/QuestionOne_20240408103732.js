@@ -40,18 +40,18 @@ export default function QuestionOne() {
                     />
                     <div className={styles.contentContainer}>
                         <div className={styles.optionContainer}>
-                            <p className={styles.openSansText} tabIndex={1}>Which best describes your approach to fashion?</p>
+                            <p className={styles.openSansText}>Which best describes your approach to fashion?</p>
                             <div className={styles.optionRowOne}>
-                                <ButtonTwo onClick={() => questionToAnswer('A')} title="Timeless and Classic" className={styles.optionRowInnerOne} tabIndex={2}/>
-                                <ButtonTwo onClick={() => questionToAnswer('B')} title="Bold and Trendy" className={styles.optionRowInnerTwo} tabIndex={3}/>
+                                <ButtonTwo onClick={() => questionToAnswer('A')} title="Timeless and Classic" className={styles.optionRowInnerOne} tabIndex={1}/>
+                                <ButtonTwo onClick={() => questionToAnswer('B')} title="Bold and Trendy" className={styles.optionRowInnerTwo} tabIndex={2}/>
                             </div>
                             <div className={styles.optionRowTwo}>
-                                <ButtonTwo onClick={() => questionToAnswer('C')} title="Simple and Practical" className={styles.optionRowInnerThree} tabIndex={4}/>
-                                <ButtonTwo onClick={() => questionToAnswer('D')} title="Unique and Free-spirited" className={styles.optionRowInnerFour} tabIndex={5}/>
+                                <ButtonTwo onClick={() => questionToAnswer('C')} title="Simple and Practical" className={styles.optionRowInnerThree} tabIndex={3}/>
+                                <ButtonTwo onClick={() => questionToAnswer('D')} title="Unique and Free-spirited" className={styles.optionRowInnerFour} tabIndex={4}/>
                             </div>
                             <div className={styles.nextButtonContainer}>
                                 {selectedAnswers.length > 0 && (
-                                    <Button onClick={handleNextQuestion} title="Next" className={styles.nextButton} tabIndex={6}/>
+                                    <Button onClick={handleNextQuestion} title="Next" className={styles.nextButton} tabIndex={5}/>
                                 )}
                             </div>
                         </div>
