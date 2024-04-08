@@ -10,13 +10,13 @@ export default function QuestionsHome() {
 
             <div className={styles.contentContainer}>
 
-            <h1 className={styles.title} tabIndex={1}>Welcome to Clotho</h1>
-            <p className={styles.openSansText} tabIndex={2}>Before you organize, we have a few questions to help you get settled</p>
+            <h1 className={styles.title}>Welcome to Clotho</h1>
+            <p className={styles.openSansText}>Before you organize, we have a few questions to help you get settled</p>
             {/* Add your mascot or other content here */}
             
             <div className={styles.nextButtonContainer}>
                 <Link href="/QuizQuestions/QuestionOne" className={styles.link}>
-                    <Button title="Start Quiz" tabIndex={3}/>
+                    <Button title="Start Quiz" tabIndex={1}/>
                 </Link>
             </div>
             </div>
