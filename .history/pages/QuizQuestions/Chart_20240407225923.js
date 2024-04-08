@@ -87,10 +87,10 @@ export default function Chart() {
             <div className={styles.questionAnalysis}>
                 <h2 className={styles.subTitle} id="space">Fashion Trend Recommendations</h2>
                 <ul analysisContent>
-                    <li className={styles.jean}>Invest in timeless pieces: tailored blazers, crisp button-down shirts, and well-fitted denim jeans</li>
-                    <li className={styles.dress}>Choose comfortable dress-ups: relaxed-fit trousers, oversized knitwear, and flowy midi dresses</li>
-                    <li className={styles.tShirt}>Prepare versatile essentials: striped tops, camel coats, and black ankle boots</li>
-                    <li className={styles.shoes}>Incorporate personalized touches: custom monogramming, and handmade jewelry</li>
+                    <li className={styles.bulletPointJean}>Invest in timeless pieces: tailored blazers, crisp button-down shirts, and well-fitted denim jeans</li>
+                    <li className={styles.bulletPointDress}>Choose comfortable dress-ups: relaxed-fit trousers, oversized knitwear, and flowy midi dresses</li>
+                    <li className={styles.bulletPointTShirt}>Prepare versatile essentials: striped tops, camel coats, and black ankle boots</li>
+                    <li className={styles.bulletPointShoes}>Incorporate personalized touches: custom monogramming, and handmade jewelry</li>
                 </ul>
             </div>
             
