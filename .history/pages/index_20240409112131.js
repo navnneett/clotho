@@ -29,7 +29,7 @@ export default function Home() {
         <Button title="Next"/>
         <BottomNavigation 
           bgColorHome="var(--button-highlight-light)"
-          pathColorHome="var(--white)"
+          pathColor="var(--white)"
           borderStyle="60%"
           IconWidth={90}
           iconHeight={36}
