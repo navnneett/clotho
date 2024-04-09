@@ -7,9 +7,7 @@
     height: 82px;
     margin: 0;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    padding: 0;
+    background-color: var(--button-linear-light);
 }
 
 .background {
