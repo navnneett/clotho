@@ -34,12 +34,12 @@
     --roboto-slab-size: 3rem;
 }
 
-
-html, 
-body {
-    margin: 0;
-    padding: 0;
+@media (max-width: 430px) {
+    html, 
+    body {
+        margin: 0;
+        padding: 0;
 }
-
+}
 
 

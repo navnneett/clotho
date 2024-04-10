@@ -30,13 +30,15 @@ const QuizEnd = ({ selectedAnswers }) => {
             <div className={styles.contentContainer}>
                 <h1>Congratulations</h1>
 
-                <p>Your Ideal Outfit Type is {calculateResult(selectedAnswers)}</p>
-
                 <QuizResult resultType={resultType} />
-
                 <Chart resultType={resultType} />
 
+                <p>Your Ideal Outfit Type is {calculateResult(selectedAnswers)}</p>
+                
+                
                 {/* Add mascot or other content here */}
+
+                
 
                 <div className={styles.buttonPosition}>
                 <Link href={'/'}>

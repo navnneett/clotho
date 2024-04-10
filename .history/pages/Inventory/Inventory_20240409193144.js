@@ -5,12 +5,10 @@ import BottomNavigation from "@/components/BottomNavigation/index.js";
 
 export default function Inventory() {
     return (
-        <div className={styles.mainContainer} >
-            <div className={styles.contentContainer}>
+        <div className={styles.mainContainer}>
+            <div>
                 <h1></h1>
             </div>
-            
-            
             <div>
                 <BottomNavigation
                     bgColorInventory="var(--button-highlight-light)"

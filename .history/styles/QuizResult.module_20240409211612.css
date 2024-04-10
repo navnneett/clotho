@@ -5,7 +5,7 @@
         background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
         background-size: cover; 
         background-position: center;
-        background-origin: content-box;
+        
     }
 
     .contentContainer {
@@ -17,4 +17,16 @@
         padding-bottom: 20px;
     }
 
+    
+.report {
+    list-style-type: "🌟 ";
+}
+
+.result {
+    font-family: var(--open-sans-text);
+}
+
+.title {
+    font-family: var(--roboto-slab-text);
+}
 }
