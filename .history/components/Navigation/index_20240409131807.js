@@ -2,8 +2,17 @@ import styles from './Navigation.module.css'
 import Image from 'next/image'
 import MenuItem from '../MenuItem'
 import Link from "next/link";
+import { useState } from 'react';
 
 export default function Navigation() {
+
+    const [click, setClick] = useState(false)
+
+    const isClick = () => {
+            setClick(true);
+    }
+
+    const backgroundColor = isClick ? 'var(--button-highlight-light)' : null;
 
     return(
         <div className={styles.sideNav}>
@@ -18,7 +27,7 @@ export default function Navigation() {
             </div>
 
             <MenuItem title="My Profile"/>
-            <Link href="/Calendar/Calendar" style={{textDecoration: 'none', color: 'var(--black)'}}>
+            <Link href="/Calendar/Calendar" style={{textDecoration: 'none', color: 'var(--black)', cursor: 'pointer', backgroundColor}} onClick={click}>
                 <MenuItem title="Calendar"/>
             </Link>
             <MenuItem title="Posts"/>

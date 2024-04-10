@@ -1,10 +1,8 @@
 import styles from './Navigation.module.css'
 import Image from 'next/image'
 import MenuItem from '../MenuItem'
-import Link from "next/link";
 
 export default function Navigation() {
-
     return(
         <div className={styles.sideNav}>
             <div className={styles.appInfo}>
@@ -18,13 +16,11 @@ export default function Navigation() {
             </div>
 
             <MenuItem title="My Profile"/>
-            <Link href="/Calendar/Calendar" style={{textDecoration: 'none', color: 'var(--black)'}}>
+            <Link>
                 <MenuItem title="Calendar"/>
             </Link>
             <MenuItem title="Posts"/>
-            <Link href="/ThriftStore/ThriftStore" style={{textDecoration: 'none', color: 'var(--black)'}}>
-                <MenuItem title="Thrift Stores"/>
-            </Link>
+            <MenuItem title="Thrift Stores"/>
             <MenuItem title="Favourite Fashion Trends"/>
             <MenuItem title="History" paddingBottom="30px"/>
             <hr/>

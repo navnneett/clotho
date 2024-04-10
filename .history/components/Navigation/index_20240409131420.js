@@ -2,8 +2,11 @@ import styles from './Navigation.module.css'
 import Image from 'next/image'
 import MenuItem from '../MenuItem'
 import Link from "next/link";
+import { useState } from 'react';
 
 export default function Navigation() {
+
+    const [click, setClick] = useState()
 
     return(
         <div className={styles.sideNav}>

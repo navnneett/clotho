@@ -5,7 +5,6 @@
     padding-left: 30px;
 }
 
-.items:hover,.items:active {
+.items:hover {
     background-color: var(--button-highlight-light);
-    color: var(--white);
 }

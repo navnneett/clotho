@@ -4,7 +4,6 @@ import MenuItem from '../MenuItem'
 import Link from "next/link";
 
 export default function Navigation() {
-
     return(
         <div className={styles.sideNav}>
             <div className={styles.appInfo}>
@@ -22,9 +21,7 @@ export default function Navigation() {
                 <MenuItem title="Calendar"/>
             </Link>
             <MenuItem title="Posts"/>
-            <Link href="/ThriftStore/ThriftStore" style={{textDecoration: 'none', color: 'var(--black)'}}>
-                <MenuItem title="Thrift Stores"/>
-            </Link>
+            <MenuItem title="Thrift Stores"/>
             <MenuItem title="Favourite Fashion Trends"/>
             <MenuItem title="History" paddingBottom="30px"/>
             <hr/>

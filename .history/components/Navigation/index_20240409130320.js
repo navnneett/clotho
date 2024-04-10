@@ -4,7 +4,6 @@ import MenuItem from '../MenuItem'
 import Link from "next/link";
 
 export default function Navigation() {
-
     return(
         <div className={styles.sideNav}>
             <div className={styles.appInfo}>
