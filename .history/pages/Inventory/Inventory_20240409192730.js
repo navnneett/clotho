@@ -5,13 +5,14 @@ import BottomNavigation from "@/components/BottomNavigation/index.js";
 
 export default function Inventory() {
     return (
-        <div className={styles.mainContainer} >
-            <div className={styles.contentContainer}>
+        <>
+            <div className={styles.mainContainer}>
+                
+                <div>
                 <h1></h1>
-            </div>
-            
-            
-            <div>
+                </div>
+                
+                <div>
                 <BottomNavigation
                     bgColorInventory="var(--button-highlight-light)"
                     pathColorInventory="var(--white)"
@@ -19,7 +20,8 @@ export default function Inventory() {
                     IconWidth={90}
                     iconHeight={36}
                 />
+                </div>
             </div>
-        </div>
-    );
+        </>
+    )
 }

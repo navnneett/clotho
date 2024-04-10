@@ -1,5 +1,10 @@
 @media (max-width: 430px) {
 
+    .contentContainer {
+        align-items: center;
+        justify-content: center;
+    }
+
     .questionAnalysis {
         padding: 25px;
     }
