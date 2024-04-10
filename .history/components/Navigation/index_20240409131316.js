@@ -5,6 +5,11 @@ import Link from "next/link";
 
 export default function Navigation() {
 
+    const textClicked = document.getElementById('textIsClicked');
+    textClicked.addEventListener('click', function(){
+        textClicked.style.backgroundColor('var(--button-highlight-light)');
+    })
+
     return(
         <div className={styles.sideNav}>
             <div className={styles.appInfo}>
@@ -18,11 +23,11 @@ export default function Navigation() {
             </div>
 
             <MenuItem title="My Profile"/>
-            <Link href="/Calendar/Calendar" style={{textDecoration: 'none', color: 'var(--black)'}}>
+            <Link href="/Calendar/Calendar" style={{textDecoration: 'none', color: 'var(--black)'}} id="textIsClicked">
                 <MenuItem title="Calendar"/>
             </Link>
             <MenuItem title="Posts"/>
-            <Link href="/ThriftStore/ThriftStore" style={{textDecoration: 'none', color: 'var(--black)'}}>
+            <Link href="/ThriftStore/ThriftStore" style={{textDecoration: 'none', color: 'var(--black)'}} id="textIsClicked">
                 <MenuItem title="Thrift Stores"/>
             </Link>
             <MenuItem title="Favourite Fashion Trends"/>

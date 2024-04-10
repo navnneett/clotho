@@ -7,7 +7,7 @@ export default function Inventory() {
     return (
         <>
             <div className={styles.mainContainer}>
-                <h1></h1>
+                <h2></h2>
                 <BottomNavigation
                     bgColorInventory="var(--button-highlight-light)"
                     pathColorInventory="var(--white)"

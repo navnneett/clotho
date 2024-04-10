@@ -6,8 +6,7 @@ import BottomNavigation from "@/components/BottomNavigation/index.js";
 export default function Inventory() {
     return (
         <>
-            <div className={styles.mainContainer}>
-                <h1></h1>
+            <div>
                 <BottomNavigation
                     bgColorInventory="var(--button-highlight-light)"
                     pathColorInventory="var(--white)"

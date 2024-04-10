@@ -5,6 +5,8 @@ import Link from "next/link";
 
 export default function Navigation() {
 
+    const textClicked = document.getElementById
+
     return(
         <div className={styles.sideNav}>
             <div className={styles.appInfo}>
