@@ -11,7 +11,7 @@ export default function Community() {
     const [ data, setData ] = useState();
     const [ isButtonClicked, setIsButtonClicked ] = useState(false);
 
-    var apiKey = process.env.NEXT_PUBLIC_API_KEY;
+    var apiKey = '9596f078c7a0457fb5fe18c0190bfa42';
     var type = 'clothing';
     var date = '2024-04-11';
     var sortBy = 'publishedAt';
@@ -50,18 +50,18 @@ export default function Community() {
                         margin: '20px',
                         padding: '30px',
                         fontFamily: '--open-sans-small',
-                        marginBottom: '50px'
+
                     }}>
                     {
                         data && Array.isArray(data.articles) && 
-                        data.articles.filter(article => article.title.toLowerCase().includes('fashion')).map((d, index) => {
+                        data.articles.filter(article => article.title.toLowerCase().includes('workout')).map((d, index) => {
                             return(
                                 <div key={index}>
                                     <Image 
-                                        src={"/images/news.jpeg"}
-                                        alt="workout image"
-                                        height={250}
-                                        width={320}
+                                    src={"/images/workout.jpg"}
+                                    alt="workout image"
+                                    height={180}
+                                    width={320}
                                     />
                                     <h3 style={{ 
                                         fontFamily: 'var(--roboto-slab-text)', 

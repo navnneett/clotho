@@ -58,9 +58,9 @@ export default function Community() {
                             return(
                                 <div key={index}>
                                     <Image 
-                                        src={"/images/news.jpeg"}
+                                        src={"/images/workout.jpg"}
                                         alt="workout image"
-                                        height={250}
+                                        height={180}
                                         width={320}
                                     />
                                     <h3 style={{ 
