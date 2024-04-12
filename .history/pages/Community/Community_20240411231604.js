@@ -53,15 +53,13 @@ export default function Community() {
 
                     }}>
                     {
-                        data && Array.isArray(data.articles) && 
-                        data.articles.filter(article => article.title.toLowerCase().includes('workout')).map((d, index) => {
+                        data && Array.isArray(data.articles) && data.articles.slice(8, 9).map((d, index) => {
                             return(
                                 <div key={index}>
                                     <Image 
                                     src={"/images/workout.jpg"}
-                                    alt="workout image"
-                                    height={180}
-                                    width={320}
+                                    height={200}
+                                    width={360}
                                     />
                                     <h3 style={{ 
                                         fontFamily: 'var(--roboto-slab-text)', 

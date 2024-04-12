@@ -1,6 +1,5 @@
 import Button from "@/components/Button";
 import Link from "next/link";
-import Image from "next/image";
 import BottomNavigation from "@/components/BottomNavigation/index.js";
 import styles from '@/styles/Community.module.css'
 import { useState } from "react";
@@ -53,35 +52,15 @@ export default function Community() {
 
                     }}>
                     {
-                        data && Array.isArray(data.articles) && 
-                        data.articles.filter(article => article.title.toLowerCase().includes('workout')).map((d, index) => {
+                        data && Array.isArray(data.articles) && data.articles.slice(8, 9).map((d, index) => {
                             return(
                                 <div key={index}>
-                                    <Image 
-                                    src={"/images/workout.jpg"}
-                                    alt="workout image"
-                                    height={180}
-                                    width={320}
-                                    />
-                                    <h3 style={{ 
-                                        fontFamily: 'var(--roboto-slab-text)', 
-                                        color: 'var(--button-highlight-light)', 
-                                        fontSize: 'var(--open-sans-medium)', 
-                                        fontWeight: 'bold' 
-                                    }}>{d.title}</h3>
-                                    <p style={{ 
-                                        fontSize: 'var(--open-sans-small)', 
-                                        fontWeight: 'var(--open-sans-weight)' 
-                                    }}>
+                                    <h3 style={{ fontFamily: 'var(--roboto-slab-text)', color: 'var(--button-highlight-light)', fontSize: 'var(--open-sans-medium)', fontWeight: 'bold' }}>{d.title}</h3>
+                                    <p style={{ fontSize: 'var(--open-sans-small)', fontWeight: 'var(--open-sans-weight)' }}>
                                         {d.description}
-                                    </p>
-                                    <p style={{ 
-                                        fontSize: 'var(--open-sans-small)', 
-                                        fontWeight: 'var(--open-sans-weight)', 
-                                        textAlign: 'right' 
-                                    }}>
                                         {d.author}
-                                        </p>
+                                    </p>
+                                    {/* <Image /> */}
                                 </div>
                             )
                         })
@@ -91,11 +70,11 @@ export default function Community() {
 
                 <div>
                     <BottomNavigation
-                        bgColorCommunity="var(--button-highlight-light)"
-                        pathColorCommunity="var(--white)"
-                        borderStyle="60%"
-                        IconWidth={90}
-                        iconHeight={36}
+                    bgColorCommunity="var(--button-highlight-light)"
+                    pathColorCommunity="var(--white)"
+                    borderStyle="60%"
+                    IconWidth={90}
+                    iconHeight={36}
                     />
                 </div>
             </div>

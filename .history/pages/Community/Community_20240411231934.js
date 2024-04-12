@@ -59,7 +59,6 @@ export default function Community() {
                                 <div key={index}>
                                     <Image 
                                     src={"/images/workout.jpg"}
-                                    alt="workout image"
                                     height={180}
                                     width={320}
                                     />
