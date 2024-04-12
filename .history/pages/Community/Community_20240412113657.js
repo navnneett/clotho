@@ -50,7 +50,7 @@ export default function Community() {
                         margin: '20px',
                         padding: '30px',
                         fontFamily: '--open-sans-small',
-                        marginBottom: '50px'
+
                     }}>
                     {
                         data && Array.isArray(data.articles) && 
@@ -58,9 +58,9 @@ export default function Community() {
                             return(
                                 <div key={index}>
                                     <Image 
-                                        src={"/images/news.jpeg"}
+                                        src={"/images/workout.jpg"}
                                         alt="workout image"
-                                        height={250}
+                                        height={180}
                                         width={320}
                                     />
                                     <h3 style={{ 

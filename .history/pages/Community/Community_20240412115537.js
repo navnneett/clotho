@@ -60,7 +60,7 @@ export default function Community() {
                                     <Image 
                                         src={"/images/news.jpeg"}
                                         alt="workout image"
-                                        height={250}
+                                        height={220}
                                         width={320}
                                     />
                                     <h3 style={{ 
