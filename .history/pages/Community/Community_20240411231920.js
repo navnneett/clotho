@@ -53,13 +53,11 @@ export default function Community() {
 
                     }}>
                     {
-                        data && Array.isArray(data.articles) && 
-                        data.articles.filter(article => article.title.toLowerCase().includes('workout')).map((d, index) => {
+                        data && Array.isArray(data.articles) && data.articles.filter(article => article.title.toLowerCase().includes('workout')).map((d, index) => {
                             return(
                                 <div key={index}>
                                     <Image 
                                     src={"/images/workout.jpg"}
-                                    alt="workout image"
                                     height={180}
                                     width={320}
                                     />

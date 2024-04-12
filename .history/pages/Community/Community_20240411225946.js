@@ -1,6 +1,5 @@
 import Button from "@/components/Button";
 import Link from "next/link";
-import Image from "next/image";
 import BottomNavigation from "@/components/BottomNavigation/index.js";
 import styles from '@/styles/Community.module.css'
 import { useState } from "react";
@@ -53,16 +52,9 @@ export default function Community() {
 
                     }}>
                     {
-                        data && Array.isArray(data.articles) && 
-                        data.articles.filter(article => article.title.toLowerCase().includes('workout')).map((d, index) => {
+                        data && Array.isArray(data.articles) && data.articles.slice(8, 9).map((d, index) => {
                             return(
-                                <div key={index}>
-                                    <Image 
-                                    src={"/images/workout.jpg"}
-                                    alt="workout image"
-                                    height={180}
-                                    width={320}
-                                    />
+                                <div key={index} style={{ borderImage: ''}}>
                                     <h3 style={{ 
                                         fontFamily: 'var(--roboto-slab-text)', 
                                         color: 'var(--button-highlight-light)', 
@@ -82,6 +74,7 @@ export default function Community() {
                                     }}>
                                         {d.author}
                                         </p>
+                                    {/* <Image /> */}
                                 </div>
                             )
                         })
