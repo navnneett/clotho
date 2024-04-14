@@ -8,11 +8,11 @@ import styles from '@/styles/Profile.module.css'
 export default function Profile() {
 
     const [isEditing, setIsEditing] = useState(false);
-    const [name, setName] = useState("Clotho");
-    const [height, setHeight] = useState("170");
-    const [weight, setWeight] = useState("72");
-    const [gender, setGender] = useState("Female");
-    const [bodyShape, setBodyShape] = useState("Retangle");
+    const [name, setName] = useState("User Name");
+    const [height, setHeight] = useState("XXX");
+    const [weight, setWeight] = useState("XXX");
+    const [gender, setGender] = useState("XXX");
+    const [bodyShape, setBodyShape] = useState("XXXX");
     const [email, setEmail] = useState("Clotho.2024@email.com");
     const [avatar, setAvatar] = useState('/images/user-light.png');
 
@@ -72,7 +72,7 @@ export default function Profile() {
                                 alt="User's avatar"
                                 width={185}
                                 height={185}
-                                className={styles.avatarFix}
+                                className={styles.avatar}
                             />
                             <input
                                 type="file"

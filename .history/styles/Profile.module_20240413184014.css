@@ -1,7 +1,7 @@
 .main {
     background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
     height: 100vh; 
-    max-width: 110vw;
+    max-width: 450px;
     background-size: cover; 
     background-position: center;
 }
@@ -93,7 +93,7 @@
 }
 
 .infoInput {
-    width: 205px;
+    width: 185px;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-style: normal;

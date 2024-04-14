@@ -6,6 +6,11 @@
     background-position: center;
 }
 
+.main input {
+    margin: 0;
+    padding: auto;
+}
+
 .title {
     font-family: "Roboto Slab";
     font-size: 30px;
@@ -93,7 +98,7 @@
 }
 
 .infoInput {
-    width: 205px;
+    width: 185px;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-style: normal;

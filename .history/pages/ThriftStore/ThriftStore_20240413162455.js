@@ -17,21 +17,8 @@ export default function ThriftStore() {
                         className={styles.menuIcon}
                     />
                     <h1 className={styles.title}>Thrift Store</h1>
-                    <Image 
-                        src={'/images/user-light.png'}
-                        alt="User icon"
-                        width={35}
-                        height={35}
-                        className={styles.userIcon}
-                    />
                 </div>
-                <div className={styles.searchBar}>
-                    <input 
-                        type="text"
-                        className={styles.barInput}
-                        placeholder="Entter you address or postal code"
-                    />
-                </div>
+
 
             </main>
             <BottomNavigation />

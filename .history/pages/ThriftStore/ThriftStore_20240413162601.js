@@ -25,13 +25,7 @@ export default function ThriftStore() {
                         className={styles.userIcon}
                     />
                 </div>
-                <div className={styles.searchBar}>
-                    <input 
-                        type="text"
-                        className={styles.barInput}
-                        placeholder="Entter you address or postal code"
-                    />
-                </div>
+
 
             </main>
             <BottomNavigation />

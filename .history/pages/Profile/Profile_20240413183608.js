@@ -8,7 +8,7 @@ import styles from '@/styles/Profile.module.css'
 export default function Profile() {
 
     const [isEditing, setIsEditing] = useState(false);
-    const [name, setName] = useState("Clotho");
+    const [name, setName] = useState("User Name");
     const [height, setHeight] = useState("170");
     const [weight, setWeight] = useState("72");
     const [gender, setGender] = useState("Female");
@@ -72,7 +72,7 @@ export default function Profile() {
                                 alt="User's avatar"
                                 width={185}
                                 height={185}
-                                className={styles.avatarFix}
+                                className={styles.avatar}
                             />
                             <input
                                 type="file"

@@ -1,11 +1,12 @@
 /* iPhone 14 Pro */
- 
+
+    
+        
     .mainContainer { 
         height: 100vh; 
-        background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
+        background-image: url('/images/quiz/light-mode.png'); 
         background-size: cover; 
         background-position: center;
-        
     }
 
     .contentContainer {
@@ -34,39 +35,23 @@
      
     }
 
-    .imageOne {
-        padding-top: 30px;
-    }
-
     .openSansText {
         font-family: var(--open-sans-text);
         font-weight: var(--open-sans-weight);
         font-size: var(--open-sans-size);
+        color: var(--light-gray);
         padding: 40px 10px; 
         margin: 30px 20px;
         text-align: center;
     }
 
-    .optionRowOne {
-        display: flex;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
+    .title {
+        font-family: var(--roboto-slab-text);
+        font-weight: var(--roboto-slab-weight);
+        font-size: var(--roboto-slab-size);
+        color: var(--black);
+        padding: 40px 10px; 
+        margin: 30px 20px;
+        text-align: center;
     }
 
-    .optionRowTwo {
-        display: flex;
-        justify-content: center; 
-        margin-bottom: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .optionRowInnerOne {
-        margin-right: 15px;
-    }
-
-    .optionRowInnerTwo {
-        margin-left: 15px;
-
-    }
