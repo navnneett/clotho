@@ -72,7 +72,7 @@ export default function Profile() {
                                 alt="User's avatar"
                                 width={185}
                                 height={185}
-                                className={styles.avatarFix}
+                                className={styles.avatar}
                             />
                             <input
                                 type="file"

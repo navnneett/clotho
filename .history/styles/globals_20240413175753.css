@@ -44,10 +44,9 @@
 
 html, 
 body {
+    margin: 0;
     padding: 0;
     width: 430px;
-    height: 923px;
-    margin: 0 auto 0 auto;
 }
 
 

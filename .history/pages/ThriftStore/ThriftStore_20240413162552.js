@@ -22,16 +22,10 @@ export default function ThriftStore() {
                         alt="User icon"
                         width={35}
                         height={35}
-                        className={styles.userIcon}
+                        className={styles.menuIcon}
                     />
                 </div>
-                <div className={styles.searchBar}>
-                    <input 
-                        type="text"
-                        className={styles.barInput}
-                        placeholder="Entter you address or postal code"
-                    />
-                </div>
+
 
             </main>
             <BottomNavigation />
