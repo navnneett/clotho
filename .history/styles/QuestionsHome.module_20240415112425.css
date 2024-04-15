@@ -1,11 +1,10 @@
-/* iPhone 14 Pro */
-    
+/* iPhone 14 Pro width: 430px */
+
     .mainContainer { 
         height: 100vh; 
-        background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
+        background-image: url('/images/quiz/light-mode.png'); 
         background-size: cover; 
         background-position: center;
-        
     }
 
     .contentContainer {
@@ -23,11 +22,15 @@
         align-items: center; 
         justify-content: center; 
         height: 100vh; 
+        
+        
     }
 
-    .finishButtonContainer {
+    .nextButtonContainer {
         position: fixed;
         bottom: calc(100vh - 820px);
+        left: 101px;
+     
     }
 
     .openSansText {

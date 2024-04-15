@@ -48,13 +48,10 @@
         position: relative;
         margin: auto;
         align-items: center;
-        left: 180px;
+        left: 120px;
     }
 
     .contentContainer {
         align-items: center;
     }
 
-.mainContainer {
-    padding: 20px;
-}
