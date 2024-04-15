@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from 'next/image'
 import { useState } from 'react';
 import BottomNavigation from "@/components/BottomNavigation/index.js";
-import Navigation from "@/components/Navigation";
 import styles from '@/styles/Profile.module.css'
 
 export default function Profile() {

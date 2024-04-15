@@ -24,23 +24,8 @@
     position: fixed;
     z-index: 100;
     width: 300px;
-    height: calc(923px - 75px);
     background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
     background-size: cover; 
     background-position: center;
 }
 
-.sideNav :any-link {
-    text-decoration: none;
-    color: black;
-}
-
-.box {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: calc(923px - 75px);
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 99; 
-  }

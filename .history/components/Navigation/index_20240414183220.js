@@ -36,6 +36,9 @@ export default function Navigation({ toggleMenu }) {
         <div>
             <div className={styles.box} onClick={handleToggleMenu}></div>
             <div className={styles.sideNav} ref={navigationRef}>
+                <div className={styles.hamburgerMenu} onClick={handleToggleMenu}>
+                    <Image src="/images/menu-burger.png" alt="Menu" width={30} height={30} />
+                </div>
                 <div className={styles.appInfo}>
                     <Image src="/images/closet-space-app.png" alt="App Logo" width={100} height={100} />
                     <p className={styles.appName}>Clotho</p>
