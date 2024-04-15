@@ -15,7 +15,7 @@ export default function ThriftStore() {
     return (
         <>
             {/* Pass toggleMenu function to the Navigation component */}
-            {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
+            <Navigation toggleMenu={toggleMenu} />
 
             <main className={styles.main}>
                 <div className={styles.pageTitle}>

@@ -1,34 +1,28 @@
+import Button from "@/components/Button";
 import { useState } from 'react';
 import Image from "next/image";
 import BottomNavigation from "@/components/BottomNavigation/index.js";
-import styles from '@/styles/ThriftStore.module.css';
-import Navigation from "@/components/Navigation"; // Import the Navigation component
+import styles from '@/styles/ThriftStore.module.css'
 
 export default function ThriftStore() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false); 
+    const [searchQuery, setSearchQuery] = useState('');
+    const [thriftStores, setThriftStores] = useState([]);
+    const [results, setResults] = useState([]);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); // Toggle the state
-    };
+   
 
+    
     return (
         <>
-            {/* Pass toggleMenu function to the Navigation component */}
-            {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
-
             <main className={styles.main}>
                 <div className={styles.pageTitle}>
-                    {/* Use the hamburger menu icon to toggle the side navigation menu */}
-                    <div onClick={toggleMenu}>
-                        <Image 
-                            src={'/images/menu-burger.png'}
-                            alt="Hamburger menu"
-                            width={50}
-                            height={35}
-                            className={styles.menuIcon}
-                        />
-                    </div>
+                    <Image 
+                        src={'/images/menu-burger.png'}
+                        alt="Hamburger menu"
+                        width={50}
+                        height={35}
+                        className={styles.menuIcon}
+                    />
                     <h1 className={styles.title}>Thrift Store</h1>
                     <Image 
                         src={'/images/user-light.png'}
@@ -44,13 +38,14 @@ export default function ThriftStore() {
                         className={styles.barInput}
                         placeholder="Enter your address or postal code"
                     />
+                    
                 </div>
 
                 <div className={styles.results}>
-                    {/* Display thrift store search results here */}
+                    
                 </div>
-            </main>
 
+            </main>
             <BottomNavigation />
         </>
     )

@@ -10,13 +10,8 @@ export default function Navigation({ toggleMenu }) {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (
-                navigationRef.current &&
-                !navigationRef.current.contains(event.target) &&
-                isOpen
-            ) {
+            if (navigationRef.current && !navigationRef.current.contains(event.target) && isOpen) {
                 setIsOpen(false);
-                toggleMenu();
             }
         };
     
@@ -25,7 +20,7 @@ export default function Navigation({ toggleMenu }) {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isOpen, toggleMenu]);
+    }, [isOpen]);
 
     const handleToggleMenu = () => {
         setIsOpen(!isOpen);
@@ -33,9 +28,8 @@ export default function Navigation({ toggleMenu }) {
     };
 
     return (
-        <div>
-            <div className={styles.box} onClick={handleToggleMenu}></div>
-            <div className={styles.sideNav} ref={navigationRef}>
+        <div className={styles.box}>
+            <div className={styles.sideNav}>
                 <div className={styles.appInfo}>
                     <Image src="/images/closet-space-app.png" alt="App Logo" width={100} height={100} />
                     <p className={styles.appName}>Clotho</p>
@@ -46,7 +40,7 @@ export default function Navigation({ toggleMenu }) {
                     <p className={styles.welcome}>Welcome!</p>
                 </div>
 
-                <div className={`${styles.navigation} ${isOpen ? styles.open : ''}`}>
+                <div ref={navigationRef} className={`${styles.navigation} ${isOpen ? styles.open : ''}`}>
                     <Link href="/Profile/Profile">
                         <MenuItem title="Profile" />
                     </Link>

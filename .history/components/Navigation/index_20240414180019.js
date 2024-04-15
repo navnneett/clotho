@@ -10,10 +10,15 @@ export default function Navigation({ toggleMenu }) {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
+            console.log('Clicked element:', event.target);
+            console.log('Navigation ref:', navigationRef.current);
+            console.log('Is open:', isOpen);
+            
             if (
                 navigationRef.current &&
                 !navigationRef.current.contains(event.target) &&
-                isOpen
+                isOpen &&
+                !event.target.classList.contains('box')
             ) {
                 setIsOpen(false);
                 toggleMenu();
@@ -34,7 +39,7 @@ export default function Navigation({ toggleMenu }) {
 
     return (
         <div>
-            <div className={styles.box} onClick={handleToggleMenu}></div>
+            <div className={styles.box}></div> {/* Keep the .box element outside of the navigation */}
             <div className={styles.sideNav} ref={navigationRef}>
                 <div className={styles.appInfo}>
                     <Image src="/images/closet-space-app.png" alt="App Logo" width={100} height={100} />

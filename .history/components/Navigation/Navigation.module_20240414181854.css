@@ -21,18 +21,13 @@
 }
 
 .sideNav {
-    position: fixed;
+    position: relative;
     z-index: 100;
     width: 300px;
     height: calc(923px - 75px);
     background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
     background-size: cover; 
     background-position: center;
-}
-
-.sideNav :any-link {
-    text-decoration: none;
-    color: black;
 }
 
 .box {

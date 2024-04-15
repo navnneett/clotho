@@ -24,8 +24,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
-      
       <main className={styles.main}>
         <div className={styles.pageTitle}>
           <div onClick={toggleMenu} className={styles.menuIcon}>
@@ -60,6 +58,8 @@ export default function Home() {
         />
 
       </main>
+
+      <Navigation toggleMenu={toggleMenu} />
     </>
   );
 }

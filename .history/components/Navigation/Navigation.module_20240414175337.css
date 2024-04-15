@@ -30,17 +30,11 @@
     background-position: center;
 }
 
-.sideNav :any-link {
-    text-decoration: none;
-    color: black;
+.box {
+    position: fixed;
+    z-index: 99;
+    width: 430px;
+    background-color: rgb( 0, 0, 0, 0.5);
+    height: calc(923px - 75px);
 }
 
-.box {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: calc(923px - 75px);
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 99; 
-  }

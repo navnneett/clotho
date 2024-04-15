@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from 'next/image'
 import { useState } from 'react';
 import BottomNavigation from "@/components/BottomNavigation/index.js";
-import Navigation from "@/components/Navigation";
 import styles from '@/styles/Profile.module.css'
 
 export default function Profile() {
@@ -58,18 +57,16 @@ export default function Profile() {
     return (
         <>
             {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
-
+            
             <main className={styles.main}>
                 <div className={styles.pageTitle}>
-                    <div onClick={toggleMenu}>
-                        <Image 
-                            src={'/images/menu-burger.png'}
-                            alt="Hamburger menu"
-                            width={50}
-                            height={35}
-                            className={styles.menuIcon}
-                        />
-                    </div>
+                    <Image 
+                        src={'/images/menu-burger.png'}
+                        alt="Hamburger menu"
+                        width={50}
+                        height={35}
+                        className={styles.menuIcon}
+                    />
                     <h1 className={styles.title}>Profile</h1>
                 </div>
                 
