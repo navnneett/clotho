@@ -1,34 +1,9 @@
-.main {
-    background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
+.mainContainer { 
     height: 100vh; 
+    background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
     background-size: cover; 
     background-position: center;
-}
-
-.title {
-    font-family: "Roboto Slab";
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.pageTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding-top: 30px;
-    padding-left: 20px;
-}
-
-.menuIcon {
-    padding-top: 20px;
-    padding-right: 33px;
-}
-
-.userIcon {
-    padding-top: 20px;
-    padding-left: 120px;
+    background-origin: content-box;
 }
 
 .contentContainer {
@@ -100,13 +75,11 @@
     overflow-x: auto;
 }
 
-.popupBackground {
+.poppupBackground {
     width: 430px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9998;
-    position: fixed;
-    bottom: 0;
+    z-index: 149;
 }
 
 .popup {
@@ -117,7 +90,7 @@
     width: 430px;
     display: flex;
     justify-content: center;
-    z-index: 9999;
+    z-index: 150;
     margin: 0;
     padding: 0;
     border-top-left-radius: 45px;
