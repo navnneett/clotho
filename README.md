@@ -6,7 +6,7 @@
 - Navneet Aulakh
 
 ## Description
-- This application is about sloving the normal problem for people's daily lives. People may be troubled by or consider what they want to dress up for different occasions (daily, special events and activities). Or they may not know what clothes they have and how to match them leading to idle items.
+- This application is about solving the normal problems in people's daily lives. People may be troubled by or consider what they want to dress up for different occasions (daily, special events and activities). Or they may not know what clothes they have and how to match them leading to idle items.
 
 ## Packages installed
 - To be continued
