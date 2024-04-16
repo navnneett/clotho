@@ -95,8 +95,8 @@ export default function Category() {
                 </div>
             </div>
 
-            {popup ? (<div className={styles.popup}>
-                <fieldset className={styles.frame}>
+            <div className={styles.popup} style={{ display: popup ? 'block' : 'none'}} onClick={() => setPopup(false)}>
+                {popup && <fieldset className={styles.frame}>
                     <h2>Generate your new outfits</h2>
                     <Image className={styles.photo} src="/images/outfits.png" width={390} height={390}/>
                     <h4>Business Casual</h4>
@@ -109,13 +109,9 @@ export default function Category() {
                     <p>
                         Likeability: ⭐️⭐️⭐️⭐️
                     </p>
-                    <div className={styles.button}>
-                        <Button title="Generate" width={300} height={50} onClick={() => overlayPage(false)}/>
-                    </div>
-                </fieldset>
-            </div>) : (
-                <></>
-            )}
+                    <Button title="Generate" width={300} height={50} onClick={() => setPopup(false)} style={{ alignItems: 'center', padding: '0 0 30px 0'}}/>
+                </fieldset>}
+            </div>
             
             <div>
                 <BottomNavigation

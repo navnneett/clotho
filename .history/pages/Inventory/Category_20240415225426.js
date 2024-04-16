@@ -7,6 +7,8 @@ import Image from "next/image";
 import { inventory } from "@/Data/inventory";
 import ButtonTwo from "@/components/ButtonTwo";
 import Button from "@/components/Button";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 export default function Category() {
 
@@ -17,14 +19,28 @@ export default function Category() {
 
     const [selectedCards, setSelectedCards] = useState([...inventory.photos]);
     const [selectedItems, setSelectedItems] = useState("All");
-    const [popup, setPopup] = useState(false);
 
     const findItems = (title) => {
         setSelectedItems(title.toUpperCase())
     }
 
-    const overlayPage = () => {
-        setPopup(!popup);
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
     }
 
     return (
@@ -40,6 +56,33 @@ export default function Category() {
                 </div>
                 
                 <div className={`${styles.chip} ${styles.carouselContainer}`}>
+                    <Carousel responsive={responsive} infinite>
+                        <div>
+                            {color ? (
+                                <div className={styles.chipButton}>
+                                    <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />
+                                </div>
+                            ) : 
+                                (
+                                <Button onClick={isClick} title="All" width={100} height={40} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" />
+                            )}
+                        </div>
+                        <div>
+                            <ButtonTwo title="Shoes" height={40} margin="5px" onClick={() => findItems("S")} />
+                        </div>
+                        <div>
+                            <ButtonTwo title="Tops" height={40} margin="5px" onClick={() => findItems("T")} />
+                        </div>
+                        <div>
+                            <ButtonTwo title="Bottoms" height={40} margin="5px" onClick={() => findItems("B")} />
+                        </div>
+                        <div>
+                            <ButtonTwo title="Jackets" height={40} margin="5px" onClick={() => findItems("J")} />
+                        </div>
+                        <div>
+                            <ButtonTwo title="Accessories" height={40} margin="5px" onClick={() => findItems("A")} />
+                        </div>
+                    </Carousel>
                     {color ? (
                             <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />
                         ) : 
@@ -73,19 +116,18 @@ export default function Category() {
                         ) : (
                             selectedItems === photo.title.slice(0,1).toUpperCase() && (
                                 <CategoryCard 
-                                    key={index}
-                                    photoId={photo.id}
-                                    className={styles.items}
-                                    src={photo.image}
-                                    title={photo.title}
-                                    alt="inventory images"
-                                    bgColor="var(--inventory-bgColor)"
-                                    borderRadius="20px"
-                                    border="0px var(--white)"
-                                    boxShadow="0px 6px 8px rgba(0, 0, 0, 0.1)"
-                                    height="150"
-                                    width="140"
-                                    onClick={() => overlayPage(true)}
+                                key={index}
+                                photoId={photo.id}
+                                className={styles.items}
+                                src={photo.image}
+                                title={photo.title}
+                                alt="inventory images"
+                                bgColor="var(--inventory-bgColor)"
+                                borderRadius="20px"
+                                border="0px var(--white)"
+                                boxShadow="0px 6px 8px rgba(0, 0, 0, 0.1)"
+                                height="150"
+                                width="140"
                                 />
                             )
                         )
@@ -95,27 +137,18 @@ export default function Category() {
                 </div>
             </div>
 
-            {popup ? (<div className={styles.popup}>
+            <div className={styles.popup}>
                 <fieldset className={styles.frame}>
                     <h2>Generate your new outfits</h2>
                     <Image className={styles.photo} src="/images/outfits.png" width={390} height={390}/>
-                    <h4>Business Casual</h4>
+                    <h4>Business Causel</h4>
                     <p>
                         Collocation rate: ⭐️⭐️⭐⭐️
-                    </p>
-                    <p>
-                        Wear rate: ⭐️⭐️⭐️
-                    </p>
-                    <p>
+                        Wear rate: ⭐️⭐️⭐️️
                         Likeability: ⭐️⭐️⭐️⭐️
-                    </p>
-                    <div className={styles.button}>
-                        <Button title="Generate" width={300} height={50} onClick={() => overlayPage(false)}/>
-                    </div>
+                        </p>
                 </fieldset>
-            </div>) : (
-                <></>
-            )}
+            </div>
             
             <div>
                 <BottomNavigation

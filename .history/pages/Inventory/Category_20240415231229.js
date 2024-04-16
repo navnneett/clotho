@@ -25,6 +25,7 @@ export default function Category() {
 
     const overlayPage = () => {
         setPopup(!popup);
+        console.log("clicked")
     }
 
     return (
@@ -95,8 +96,8 @@ export default function Category() {
                 </div>
             </div>
 
-            {popup ? (<div className={styles.popup}>
-                <fieldset className={styles.frame}>
+            <div className={styles.popup}>
+                {popup && <fieldset className={styles.frame}>
                     <h2>Generate your new outfits</h2>
                     <Image className={styles.photo} src="/images/outfits.png" width={390} height={390}/>
                     <h4>Business Casual</h4>
@@ -109,13 +110,8 @@ export default function Category() {
                     <p>
                         Likeability: ⭐️⭐️⭐️⭐️
                     </p>
-                    <div className={styles.button}>
-                        <Button title="Generate" width={300} height={50} onClick={() => overlayPage(false)}/>
-                    </div>
-                </fieldset>
-            </div>) : (
-                <></>
-            )}
+                </fieldset>}
+            </div>
             
             <div>
                 <BottomNavigation
