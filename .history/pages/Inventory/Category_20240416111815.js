@@ -2,7 +2,7 @@ import styles from "@/styles/Category.module.css";
 import Link from "next/link";
 import BottomNavigation from "@/components/BottomNavigation/index.js";
 import CategoryCard from "@/components/CategoryCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { inventory } from "@/Data/inventory";
 import ButtonTwo from "@/components/ButtonTwo";
@@ -20,6 +20,7 @@ export default function Category() {
     const [selectedItems, setSelectedItems] = useState("All");
     const [popup, setPopup] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false); 
+    const [show, setShow] = useState(true);
 
     const findItems = (title) => {
         setSelectedItems(title.toUpperCase())
@@ -33,9 +34,9 @@ export default function Category() {
         setIsMenuOpen(!isMenuOpen); // Toggle the state
     };
 
-    useEffect(() => {
-        findItems("ALL");
-    }, []);
+    const showAll = () => {
+        setShow(!show);
+    }
 
     return (
         <>
@@ -63,20 +64,16 @@ export default function Category() {
                 <div className={styles.mainContainer} >
                     <div className={styles.contentContainer}>
                         <div className={`${styles.chip} ${styles.carouselContainer}`}>
-                        {color ? (
-                            <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />
-                        ) : 
-                            (
-                            <Button onClick={isClick} title="All" padding={"10px 15px 15px 15px"} borderRadius="11px" width={100} height={40} fontSize="var(--open-sans-small)" margin="5px" />
-                        )}
+                                <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")}/>
                                 <ButtonTwo title="Shoes" height={40} margin="5px" onClick={() => findItems("S")} />
                                 <ButtonTwo title="Tops" height={40} margin="5px" onClick={() => findItems("T")} />
                                 <ButtonTwo title="Bottoms" height={40} margin="5px" onClick={() => findItems("B")} />
                                 <ButtonTwo title="Jackets" height={40} margin="5px" onClick={() => findItems("J")} />
                                 <ButtonTwo title="Accessories" height={40} margin="5px" onClick={() => findItems("A")} />
                         </div>
-                        
-                        <div className={styles.cards}>
+                            
+                        {show ? (
+                            <div className={styles.cards}>
                             {selectedCards && selectedCards.map((photo, index) => (
                                 selectedItems === "ALL" ? (
                                     <CategoryCard 
@@ -116,6 +113,28 @@ export default function Category() {
                             ))}
 
                         </div>
+                        ) : (
+                            <div className={styles.cards}>
+                            {selectedCards && selectedCards.map((photo, index) => (
+                            <CategoryCard 
+                                        key={index}
+                                        photoId={photo.id}
+                                        className={styles.items}
+                                        src={photo.image}
+                                        title={photo.title}
+                                        alt="inventory images"
+                                        bgColor="var(--inventory-bgColor)"
+                                        borderRadius="20px"
+                                        border="0px var(--white)"
+                                        boxShadow="0px 6px 8px rgba(0, 0, 0, 0.1)"
+                                        height="150"
+                                        width="140"
+                                        onClick={() => overlayPage(true)}
+                                    />))}
+                        </div>
+                        )}
+
+                        
                     </div>
 
                     {popup ? (
