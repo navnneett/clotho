@@ -69,9 +69,10 @@
 }
 
 .carouselContainer {
-    max-width: 290px;
-    padding-left: 140px;
+    max-width: 430px;
     overflow-x: auto;
 }
 
-
+.chipButton {
+    margin-left: 1rem;
+}

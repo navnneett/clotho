@@ -57,13 +57,14 @@ export default function Category() {
                 <div className={`${styles.chip} ${styles.carouselContainer}`}>
                     <Carousel responsive={responsive} infinite>
                         <div>
+                            <div className={styles.chipButton}></div>
                             {color ? (
                                 <div className={styles.chipButton}>
-                                    <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />
+                                    <ButtonTwo title="All" height={40} margin="5px" onClick={() => findItems("ALL")} />
                                 </div>
                             ) : 
                                 (
-                                <Button onClick={isClick} title="All" width={100} height={40} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" />
+                                <Button onClick={isClick} title="All" height={40} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" />
                             )}
                         </div>
                         <div>
@@ -83,10 +84,10 @@ export default function Category() {
                         </div>
                     </Carousel>
                     {color ? (
-                            <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />
+                            <ButtonTwo title="All" height={40} margin="5px" onClick={() => findItems("ALL")} />
                         ) : 
                             (
-                            <Button onClick={isClick} title="All" width={100} height={40} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" />
+                            <Button onClick={isClick} title="All" height={40} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" />
                         )}
                         <ButtonTwo title="Shoes" height={40} margin="5px" onClick={() => findItems("S")} />
                         <ButtonTwo title="Tops" height={40} margin="5px" onClick={() => findItems("T")} />

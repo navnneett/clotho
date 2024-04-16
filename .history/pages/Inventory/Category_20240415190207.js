@@ -57,6 +57,7 @@ export default function Category() {
                 <div className={`${styles.chip} ${styles.carouselContainer}`}>
                     <Carousel responsive={responsive} infinite>
                         <div>
+                            <div className={styles.chipButton}></div>
                             {color ? (
                                 <div className={styles.chipButton}>
                                     <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />

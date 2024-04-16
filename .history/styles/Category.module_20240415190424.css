@@ -69,8 +69,8 @@
 }
 
 .carouselContainer {
-    max-width: 290px;
-    padding-left: 140px;
+    max-width: 300px;
+    padding-left: 130px;
     overflow-x: auto;
 }
 
