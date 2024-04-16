@@ -59,7 +59,7 @@ export default function Category() {
                 <div className={styles.mainContainer} >
                     <div className={styles.contentContainer}>
                         <div className={`${styles.chip} ${styles.carouselContainer}`}>
-                                <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")}/>
+                                <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")}  className={styles.allButton}/>
                                 <ButtonTwo title="Shoes" height={40} margin="5px" onClick={() => findItems("S")} />
                                 <ButtonTwo title="Tops" height={40} margin="5px" onClick={() => findItems("T")} />
                                 <ButtonTwo title="Bottoms" height={40} margin="5px" onClick={() => findItems("B")} />

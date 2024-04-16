@@ -19,7 +19,7 @@
     align-items: flex-start;
     padding-top: 10px;
     padding-left: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .menuIcon {
@@ -29,7 +29,7 @@
 
 .userIcon {
     padding-top: 40px;
-    padding-left: 134px;
+    padding-left: 120px;
 }
 
 .contentContainer {
