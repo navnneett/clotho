@@ -53,7 +53,7 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     margin-top: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
 .chip {
@@ -78,10 +78,8 @@
 .popup {
     align-items: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: relative;
     z-index: 99;
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
 }
 
 .frame {
@@ -106,9 +104,4 @@
     line-height: 5px;
     padding-left: 20px;
     font-family: var(--open-sans-text);
-}
-
-.button {
-    padding-top: 30px;
-    text-align: center;
 }

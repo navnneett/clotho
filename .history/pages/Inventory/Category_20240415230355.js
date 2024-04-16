@@ -17,14 +17,9 @@ export default function Category() {
 
     const [selectedCards, setSelectedCards] = useState([...inventory.photos]);
     const [selectedItems, setSelectedItems] = useState("All");
-    const [popup, setPopup] = useState(false);
 
     const findItems = (title) => {
         setSelectedItems(title.toUpperCase())
-    }
-
-    const overlayPage = () => {
-        setPopup(!popup);
     }
 
     return (
@@ -73,19 +68,18 @@ export default function Category() {
                         ) : (
                             selectedItems === photo.title.slice(0,1).toUpperCase() && (
                                 <CategoryCard 
-                                    key={index}
-                                    photoId={photo.id}
-                                    className={styles.items}
-                                    src={photo.image}
-                                    title={photo.title}
-                                    alt="inventory images"
-                                    bgColor="var(--inventory-bgColor)"
-                                    borderRadius="20px"
-                                    border="0px var(--white)"
-                                    boxShadow="0px 6px 8px rgba(0, 0, 0, 0.1)"
-                                    height="150"
-                                    width="140"
-                                    onClick={() => overlayPage(true)}
+                                key={index}
+                                photoId={photo.id}
+                                className={styles.items}
+                                src={photo.image}
+                                title={photo.title}
+                                alt="inventory images"
+                                bgColor="var(--inventory-bgColor)"
+                                borderRadius="20px"
+                                border="0px var(--white)"
+                                boxShadow="0px 6px 8px rgba(0, 0, 0, 0.1)"
+                                height="150"
+                                width="140"
                                 />
                             )
                         )
@@ -95,7 +89,7 @@ export default function Category() {
                 </div>
             </div>
 
-            {popup ? (<div className={styles.popup}>
+            <div className={styles.popup}>
                 <fieldset className={styles.frame}>
                     <h2>Generate your new outfits</h2>
                     <Image className={styles.photo} src="/images/outfits.png" width={390} height={390}/>
@@ -109,13 +103,9 @@ export default function Category() {
                     <p>
                         Likeability: ⭐️⭐️⭐️⭐️
                     </p>
-                    <div className={styles.button}>
-                        <Button title="Generate" width={300} height={50} onClick={() => overlayPage(false)}/>
-                    </div>
+                    
                 </fieldset>
-            </div>) : (
-                <></>
-            )}
+            </div>
             
             <div>
                 <BottomNavigation
