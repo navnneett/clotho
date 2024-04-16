@@ -2,7 +2,7 @@ import styles from "@/styles/Category.module.css";
 import Link from "next/link";
 import BottomNavigation from "@/components/BottomNavigation/index.js";
 import CategoryCard from "@/components/CategoryCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { inventory } from "@/Data/inventory";
 import ButtonTwo from "@/components/ButtonTwo";
@@ -33,10 +33,6 @@ export default function Category() {
         setIsMenuOpen(!isMenuOpen); // Toggle the state
     };
 
-    useEffect(() => {
-        findItems("ALL");
-    }, []);
-
     return (
         <>
             {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
@@ -63,12 +59,7 @@ export default function Category() {
                 <div className={styles.mainContainer} >
                     <div className={styles.contentContainer}>
                         <div className={`${styles.chip} ${styles.carouselContainer}`}>
-                        {color ? (
-                            <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />
-                        ) : 
-                            (
-                            <Button onClick={isClick} title="All" padding={"10px 15px 15px 15px"} borderRadius="11px" width={100} height={40} fontSize="var(--open-sans-small)" margin="5px" />
-                        )}
+                                {isClick ? (<Button title="All" height={40} padding: "10px 15px 15px 15px" borderRadius="11px" margin="5px" onClick={() => findItems("ALL")}/>): (<ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")}/>)}
                                 <ButtonTwo title="Shoes" height={40} margin="5px" onClick={() => findItems("S")} />
                                 <ButtonTwo title="Tops" height={40} margin="5px" onClick={() => findItems("T")} />
                                 <ButtonTwo title="Bottoms" height={40} margin="5px" onClick={() => findItems("B")} />
