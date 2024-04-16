@@ -64,14 +64,7 @@
     width: 0;
 }
 
-.chip > div {
-    display: inline-block;
-}
-
 .carouselContainer {
-    max-width: 290px;
-    padding-left: 140px;
-    overflow-x: auto;
+    max-width: 430px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
-
-

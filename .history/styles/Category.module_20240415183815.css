@@ -66,12 +66,10 @@
 
 .chip > div {
     display: inline-block;
+    min-width: 100px;
 }
 
 .carouselContainer {
-    max-width: 290px;
-    padding-left: 140px;
-    overflow-x: auto;
+    max-width: 430px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
-
-

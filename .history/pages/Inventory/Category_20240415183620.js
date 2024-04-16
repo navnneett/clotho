@@ -25,22 +25,23 @@ export default function Category() {
 
     const responsive = {
         superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
+          breakpoint: { max: 464, min: 0 },
+          items: 1
         }
-    }
+      }
 
     return (
         <div className={styles.mainContainer} >
@@ -53,46 +54,50 @@ export default function Category() {
                         <Image src="/images/inventory/User_account.png" height={35} width={30} />
                     </div>
                 </div>
-                
+
                 <div className={`${styles.chip} ${styles.carouselContainer}`}>
-                    <Carousel responsive={responsive} infinite>
+                    <Carousel responsive={responsive}>
                         <div>
                             {color ? (
-                                <div className={styles.chipButton}>
-                                    <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />
-                                </div>
-                            ) : 
+                            <ButtonTwo title="All" height={40} width={100} margin="5px" onClick={() => findItems("ALL")}>
+                                All
+                            </ButtonTwo>) : 
                                 (
-                                <Button onClick={isClick} title="All" width={100} height={40} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" />
+                                <Button onClick={isClick} title="All" height={40} width={100} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" >
+                                    All
+                                </Button>
                             )}
                         </div>
                         <div>
-                            <ButtonTwo title="Shoes" height={40} margin="5px" onClick={() => findItems("S")} />
+                            <ButtonTwo title="Shoes" height={40} width={150} margin="5px" onClick={() => findItems("S")}>Shoes</ButtonTwo>
                         </div>
                         <div>
-                            <ButtonTwo title="Tops" height={40} margin="5px" onClick={() => findItems("T")} />
+                            <ButtonTwo title="Tops" height={40} width={100} margin="5px" onClick={() => findItems("T")}>Tops</ButtonTwo>
                         </div>
                         <div>
-                            <ButtonTwo title="Bottoms" height={40} margin="5px" onClick={() => findItems("B")} />
+                            <ButtonTwo title="Bottoms" height={40} width={150} margin="5px" onClick={() => findItems("B")}>Bottoms</ButtonTwo>
                         </div>
                         <div>
-                            <ButtonTwo title="Jackets" height={40} margin="5px" onClick={() => findItems("J")} />
+                            <ButtonTwo title="Jackets" height={40} width={200} margin="5px" onClick={() => findItems("J")}>Jackets</ButtonTwo>
                         </div>
                         <div>
-                            <ButtonTwo title="Accessories" height={40} margin="5px" onClick={() => findItems("A")} />
+                            <ButtonTwo title="Accessories" height={40} width={250} margin="5px" onClick={() => findItems("A")}>Accessories</ButtonTwo>
                         </div>
                     </Carousel>
                     {color ? (
-                            <ButtonTwo title="All" width={100} height={40} margin="5px" onClick={() => findItems("ALL")} />
-                        ) : 
+                        <ButtonTwo title="All" height={40} width={100} margin="5px" onClick={() => findItems("ALL")}>
+                            All
+                        </ButtonTwo>) : 
                             (
-                            <Button onClick={isClick} title="All" width={100} height={40} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" />
+                            <Button onClick={isClick} title="All" height={40} width={100} borderRadius="10px" fontSize="var(--open-sans-small)" margin="5px" >
+                                All
+                            </Button>
                         )}
-                        <ButtonTwo title="Shoes" height={40} margin="5px" onClick={() => findItems("S")} />
-                        <ButtonTwo title="Tops" height={40} margin="5px" onClick={() => findItems("T")} />
-                        <ButtonTwo title="Bottoms" height={40} margin="5px" onClick={() => findItems("B")} />
-                        <ButtonTwo title="Jackets" height={40} margin="5px" onClick={() => findItems("J")} />
-                        <ButtonTwo title="Accessories" height={40} margin="5px" onClick={() => findItems("A")} />
+                        <ButtonTwo title="Shoes" height={40} width={150} margin="5px" onClick={() => findItems("S")}>Shoes</ButtonTwo>
+                        <ButtonTwo title="Tops" height={40} width={100} margin="5px" onClick={() => findItems("T")}>Tops</ButtonTwo>
+                        <ButtonTwo title="Bottoms" height={40} width={200} margin="5px" onClick={() => findItems("B")}>Bottoms</ButtonTwo>
+                        <ButtonTwo title="Jackets" height={40} width={200} margin="5px" onClick={() => findItems("J")}>Jackets</ButtonTwo>
+                        <ButtonTwo title="Accessories" height={40} width={250} margin="5px" onClick={() => findItems("A")}>Accessories</ButtonTwo>
                 </div>
 
                 <div className={styles.cards}>
