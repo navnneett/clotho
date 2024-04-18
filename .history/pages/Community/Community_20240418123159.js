@@ -22,10 +22,11 @@ export default function Community() {
         if(isButtonClicked) {
             setData(null);
             setIsButtonClicked(false);
+            console.log(response.data);
         } else {
             axios.get(url)
             .then((response) => {
-                // console.clear();
+                console.clear();
                 setData(response.data);
                 setIsButtonClicked(true);
                 console.log(response.data);
@@ -58,9 +59,9 @@ export default function Community() {
                             return(
                                 <div key={index}>
                                     <Image 
-                                        src={d.urlToImage}
+                                        src={"/images/news.jpeg"}
                                         alt="workout image"
-                                        height={230}
+                                        height={250}
                                         width={320}
                                     />
                                     <h3 style={{ 

@@ -22,6 +22,7 @@ export default function Community() {
         if(isButtonClicked) {
             setData(null);
             setIsButtonClicked(false);
+            console.log(response.data);
         } else {
             axios.get(url)
             .then((response) => {

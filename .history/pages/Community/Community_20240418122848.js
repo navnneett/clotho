@@ -21,7 +21,7 @@ export default function Community() {
     const GrabUsers = () => {
         if(isButtonClicked) {
             setData(null);
-            setIsButtonClicked(false);
+            setIsButtonClicked(false)
         } else {
             axios.get(url)
             .then((response) => {
@@ -58,9 +58,9 @@ export default function Community() {
                             return(
                                 <div key={index}>
                                     <Image 
-                                        src={d.urlToImage}
+                                        src={"/images/news.jpeg"}
                                         alt="workout image"
-                                        height={230}
+                                        height={250}
                                         width={320}
                                     />
                                     <h3 style={{ 

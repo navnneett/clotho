@@ -22,6 +22,7 @@ export default function Community() {
         if(isButtonClicked) {
             setData(null);
             setIsButtonClicked(false);
+            console.log(response.data);
         } else {
             axios.get(url)
             .then((response) => {
@@ -60,7 +61,7 @@ export default function Community() {
                                     <Image 
                                         src={d.urlToImage}
                                         alt="workout image"
-                                        height={230}
+                                        height={250}
                                         width={320}
                                     />
                                     <h3 style={{ 
