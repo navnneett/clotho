@@ -32,7 +32,7 @@ export default function BottomNavigation(props) {
     
     return (
         <>
-            { openPopup && <AddPopup plusButton={plusButton} onClick={closePopup}/>}
+            { openPopup && <AddPopup plusButton={plusButton} />}
             <div className={styles.container}>
                 <div className={styles.home} style={{backgroundColor: bgColorHome, borderRadius: borderStyle, width: iconWidth, height: iconHeight}}>
                     <Link href='/'>
