@@ -73,8 +73,8 @@ export default function Community() {
                             gap: '20px',
                             justifyContent: 'center',
                             border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '0',
-                            padding: '0px',
+                            margin: '20px 0 20px 0',
+                            padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px'
                         }}>

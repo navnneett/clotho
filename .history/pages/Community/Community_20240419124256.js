@@ -5,13 +5,11 @@ import BottomNavigation from "@/components/BottomNavigation/index.js";
 import styles from '@/styles/Community.module.css'
 import { useState } from "react";
 import axios from 'axios';
-import Navigation from "@/components/Navigation";
 
 export default function Community() {
 
     const [ data, setData ] = useState();
     const [ isButtonClicked, setIsButtonClicked ] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
     var apiKey = process.env.NEXT_PUBLIC_API_KEY;
     var type = 'clothing';
@@ -37,35 +35,12 @@ export default function Community() {
         }
     }
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); // Toggle the state
-    };
-
     return (
         <>
-            {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
             <main className={styles.main}>
-                <div className={styles.pageTitle}>
-                    <div onClick={toggleMenu}>
-                        <Image 
-                            src={'/images/menu-burger.png'}
-                            alt="Hamburger menu"
-                            width={50}
-                            height={35}
-                            className={styles.menuIcon}
-                        />
-                    </div>
-                    <h1 className={styles.title}>Communication</h1>
-                    <Image 
-                        src={'/images/user-light.png'}
-                        alt="User icon"
-                        width={35}
-                        height={35}
-                        className={styles.userIcon}
-                    />
-                </div>
                 <div className={styles.mainContainer}>
                     <div className={styles.contentContainer}>
+                        <h1 className={styles.title}>Community</h1>
                         <Button onClick={() => GrabUsers()} title={isButtonClicked ? "Close News": "See News"} height={40} width={170}></Button>
                         <div style={{
                             display: 'flex',
@@ -73,8 +48,8 @@ export default function Community() {
                             gap: '20px',
                             justifyContent: 'center',
                             border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '0',
-                            padding: '0px',
+                            margin: '20px',
+                            padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px'
                         }}>

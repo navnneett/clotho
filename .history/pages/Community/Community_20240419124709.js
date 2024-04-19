@@ -45,7 +45,7 @@ export default function Community() {
         <>
             {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
             <main className={styles.main}>
-                <div className={styles.pageTitle}>
+            <div className={styles.pageTitle}>
                     <div onClick={toggleMenu}>
                         <Image 
                             src={'/images/menu-burger.png'}
@@ -73,8 +73,8 @@ export default function Community() {
                             gap: '20px',
                             justifyContent: 'center',
                             border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '0',
-                            padding: '0px',
+                            margin: '20px',
+                            padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px'
                         }}>

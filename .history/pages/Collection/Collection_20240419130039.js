@@ -1,6 +1,5 @@
 import Button from "@/components/Button";
 import Link from "next/link";
-import Image from "next/image"
 import styles from "@/styles/Collection.module.css"
 import BottomNavigation from "@/components/BottomNavigation/index.js";
 import Navigation from "@/components/Navigation";

@@ -1,7 +1,5 @@
 import Button from "@/components/Button";
 import Link from "next/link";
-import Image from "next/image"
-import styles from "@/styles/Collection.module.css"
 import BottomNavigation from "@/components/BottomNavigation/index.js";
 import Navigation from "@/components/Navigation";
 import { useState } from "react";
@@ -27,7 +25,7 @@ export default function Collection() {
                             className={styles.menuIcon}
                         />
                     </div>
-                    <h1 className={styles.title}>Collection</h1>
+                    <h1 className={styles.title}>Communication</h1>
                     <Image 
                         src={'/images/user-light.png'}
                         alt="User icon"
