@@ -20,8 +20,6 @@
 .userIcon {
     padding-top: 20px;
     padding-left: 0px;
-    padding-right: 25px;
-    z-index: 4;
 }
   
 .title {
@@ -30,7 +28,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 250px;
+    width: 240px;
     text-align: left;
 }
   

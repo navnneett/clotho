@@ -14,29 +14,19 @@ export default function Inventory() {
 
     return (
         <>
-            {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
             <main className={styles.main}>
-                <div className={styles.pageTitle}>
-                    <div onClick={toggleMenu}>
-                        <Image 
-                            src={'/images/menu-burger.png'}
-                            alt="Hamburger menu"
-                            width={50}
-                            height={35}
-                            className={styles.menuIcon}
-                        />
-                    </div>
-                    <h1 className={styles.title}>Wardrobe</h1>
-                    <Image 
-                        src={'/images/user-light.png'}
-                        alt="User icon"
-                        width={35}
-                        height={35}
-                        className={styles.userIcon}
-                    />
-                </div>
                 <div className={styles.mainContainer} >
                     <div className={styles.contentContainer}>
+                        <div className={styles.topHead}>
+                            <div className={styles.headline}>
+                                <h1 className={styles.title}>My Wardrobe</h1>
+                                <h3 className={styles.content}>Customize Your Own Wardrobe</h3>
+                            </div>
+                            <div className={styles.user}>
+                                <Image src="/images/inventory/User_account.png" height={35} width={30} />
+                            </div>
+                        </div>
+
                         <div className={styles.cards}>
                             <Link href={'/Inventory/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
                                 <InventoryCard 

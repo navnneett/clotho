@@ -5,13 +5,11 @@ import BottomNavigation from "@/components/BottomNavigation/index.js";
 import styles from '@/styles/Community.module.css'
 import { useState } from "react";
 import axios from 'axios';
-import Navigation from "@/components/Navigation";
 
 export default function Community() {
 
     const [ data, setData ] = useState();
     const [ isButtonClicked, setIsButtonClicked ] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
     var apiKey = process.env.NEXT_PUBLIC_API_KEY;
     var type = 'clothing';
@@ -37,15 +35,10 @@ export default function Community() {
         }
     }
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); // Toggle the state
-    };
-
     return (
         <>
-            {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
             <main className={styles.main}>
-                <div className={styles.pageTitle}>
+            <div className={styles.pageTitle}>
                     <div onClick={toggleMenu}>
                         <Image 
                             src={'/images/menu-burger.png'}
@@ -55,7 +48,7 @@ export default function Community() {
                             className={styles.menuIcon}
                         />
                     </div>
-                    <h1 className={styles.title}>Communication</h1>
+                    <h1 className={styles.title}>Wardrobe</h1>
                     <Image 
                         src={'/images/user-light.png'}
                         alt="User icon"
@@ -73,8 +66,8 @@ export default function Community() {
                             gap: '20px',
                             justifyContent: 'center',
                             border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '0',
-                            padding: '0px',
+                            margin: '20px',
+                            padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px'
                         }}>

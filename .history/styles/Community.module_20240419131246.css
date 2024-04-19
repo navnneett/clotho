@@ -14,14 +14,12 @@
 
 .menuIcon {
     padding-top: 20px;
-    padding-right: 25px;
+    padding-right: 33px;
 }
   
 .userIcon {
     padding-top: 20px;
-    padding-left: 0px;
-    padding-right: 25px;
-    z-index: 4;
+    padding-left: 50px;
 }
   
 .title {
@@ -30,8 +28,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 250px;
-    text-align: left;
 }
   
 .pageTitle {
