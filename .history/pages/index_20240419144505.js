@@ -47,15 +47,13 @@ export default function Home() {
           />
         </div>
         
-        <div className={styles.contentContainer}>
-          <Link href='/QuizQuestions/QuestionsHome'>
-            Take A Quiz
-          </Link>
+        <Link href='/QuizQuestions/QuestionsHome'>
+          Take A Quiz
+        </Link>
 
-          <Button title="Next"/>
+        <Button title="Next"/>
 
-          <CollectionCard/>
-        </div>
+        <CollectionCard/>
 
       </main>
       <BottomNavigation 

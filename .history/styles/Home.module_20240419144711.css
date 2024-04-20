@@ -3,6 +3,8 @@
   height: 100vh; 
   background-size: cover; 
   background-position: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   padding-bottom: 100px;
 }
@@ -32,15 +34,3 @@
   padding-top: 30px;
   padding-left: 20px;
 }
-
-.contentContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 50vh;
-}
-
-
-
-
