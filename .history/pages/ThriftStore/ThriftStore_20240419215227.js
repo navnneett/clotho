@@ -87,8 +87,8 @@ export default function ThriftStore() {
                 </div>
 
                 <div className={styles.results}>
-                    {isLoading && <p className={styles.loading}>Loading...</p>}
-                    {error && <p className={styles.error}>Error: {error.message}</p>}
+                    {isLoading && <p>Loading...</p>}
+                    {error && <p>Error: {error.message}</p>}
                     {!isLoading && !error && searchResults.length > 0 && (
                         searchResults.slice(0, 20).map((result, index) => (
                             <div key={index} className={styles.resultCard}>

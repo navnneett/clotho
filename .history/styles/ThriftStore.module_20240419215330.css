@@ -77,10 +77,6 @@
     border-bottom: 1px solid #A5A5A5;
 }
 
-.resultCard:hover {
-    background: #dbdbdb;
-}
-
 .storeName {
     font-family: "Open Sans";
     font-size: 22px;
@@ -101,15 +97,7 @@
     margin: 0;
 }
 
-.error,
-.loading {
-    text-align: center;
-    font-family: "Open Sans";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
+
 
 
 
