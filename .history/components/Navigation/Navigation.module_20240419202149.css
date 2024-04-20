@@ -26,6 +26,8 @@
     position: fixed;
     z-index: 100;
     width: 300px;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
     height: calc(923px - 75px);
     background-image: url('/images/quiz/Light Mode Low Opacity.png'); 
     background-size: cover; 

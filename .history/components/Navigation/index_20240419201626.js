@@ -40,7 +40,7 @@ export default function Navigation({ toggleMenu }) {
                     <Image src="/images/closet-space-app.png" alt="App Logo" width={100} height={100} />
                     <p className={styles.appName}>Clotho</p>
                 </div>
-                
+
                 <div className={styles.userInfo}>
                     <Image src="/images/user.png" alt="User Image" width={50} height={50} />
                     <p className={styles.welcome}>Welcome!</p>
@@ -71,6 +71,7 @@ export default function Navigation({ toggleMenu }) {
                     <MenuItem title="History" paddingBottom="30px" />
                     <hr />
                     <MenuItem title="Setting" paddingTop="30px" />
+                    <MenuItem title="Help" />
                     <MenuItem title="Sign Out" />
                 </div>
             </div>
