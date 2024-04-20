@@ -17,7 +17,7 @@ export default function ThriftStore() {
 
     var apiKey = process.env.NEXT_PUBLIC_API_ZIPCODE;
 
-    const url = `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${searchQuery}&minimumradius=0&maximumradius=2&country=Canada&key=${apiKey}`;
+    const url = `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${searchQuery}&minimumradius=0&maximumradius=5&country=Canada&key=${apiKey}`;
     
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -35,12 +35,8 @@ export default function ThriftStore() {
                     setIsButtonClicked(true);
                     console.log(DataList);
                 }).catch(err => {
-                    console.log(err);
-                    setError(err);
+                    console.log(err)
                 })
-                .finally(() => {
-                    setIsLoading(false);
-                });
         }
     };
 
@@ -48,7 +44,7 @@ export default function ThriftStore() {
         <>
             {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
 
-            <main className={`${styles.main} ${styles.box}`}>
+            <main className={styles.main}>
                 <div className={styles.pageTitle}>
                     <div onClick={toggleMenu}>
                         <Image 
@@ -87,20 +83,18 @@ export default function ThriftStore() {
                 </div>
 
                 <div className={styles.results}>
-                    {isLoading && <p className={styles.loading}>Loading...</p>}
-                    {error && <p className={styles.error}>Error: {error.message}</p>}
-                    {!isLoading && !error && searchResults.length > 0 && (
-                        searchResults.slice(0, 20).map((result, index) => (
-                            <div key={index} className={styles.resultCard}>
+                    {isLoading && <p>Loading...</p>}
+                    {error && <p>Error: {error.message}</p>}
+                    {!isLoading && !error && Array.isArray(data) && 
+                        searchResults.map((z, index) => (
+                        <div key={index}>
+                            <div className={styles.resultCard}>
                                 <p className={styles.storeName}>Thrift Store</p>
-                                <p className={styles.subText}>{result.City}</p>
-                                <p className={styles.subText}>{result.Code}</p>
+                                {z.DataList.City}
+                                {z.DataList.Code}
                             </div>
-                        ))
-                    )}
-                    {!isLoading && !error && searchResults.length === 0 && (
-                        <p>No results found.</p>
-                    )}
+                        </div>
+                    ))}
                 </div>
             </main>
 

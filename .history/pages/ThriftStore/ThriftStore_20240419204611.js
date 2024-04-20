@@ -7,48 +7,31 @@ import Navigation from "@/components/Navigation"; // Import the Navigation compo
 
 export default function ThriftStore() {
     const [isOpen, setIsOpen] = useState(false);
-    const [ data, setData ] = useState();
     const [isMenuOpen, setIsMenuOpen] = useState(false); 
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const [ isButtonClicked, setIsButtonClicked ] = useState(false);
 
     var apiKey = process.env.NEXT_PUBLIC_API_ZIPCODE;
-
-    const url = `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${searchQuery}&minimumradius=0&maximumradius=2&country=Canada&key=${apiKey}`;
     
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        setIsMenuOpen(!isMenuOpen); // Toggle the state
     };
 
     const handleSearch = async () => {
-        if(isButtonClicked) {
-            setData(null);
-            setIsButtonClicked(false);
-        } else {
-            axios.get(url)
-                .then((response) => {
-                    const { DataList } = response.data; // Assuming DataList contains the array of results
-                    setSearchResults(DataList); // Update searchResults state with the array of results
-                    setIsButtonClicked(true);
-                    console.log(DataList);
-                }).catch(err => {
-                    console.log(err);
-                    setError(err);
-                })
-                .finally(() => {
-                    setIsLoading(false);
-                });
+        try {
+            const response = await axios.get(`https://www.zipcodeapi.com/rest/v2/CA/${apiKey}/radius.json/A1A1A1/5/mile?simple`);
+            setSearchResults(response.data);
+        } catch (error) {
+            console.error('Error searching:', error);
         }
     };
+
 
     return (
         <>
             {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
 
-            <main className={`${styles.main} ${styles.box}`}>
+            <main className={styles.main}>
                 <div className={styles.pageTitle}>
                     <div onClick={toggleMenu}>
                         <Image 
@@ -87,20 +70,9 @@ export default function ThriftStore() {
                 </div>
 
                 <div className={styles.results}>
-                    {isLoading && <p className={styles.loading}>Loading...</p>}
-                    {error && <p className={styles.error}>Error: {error.message}</p>}
-                    {!isLoading && !error && searchResults.length > 0 && (
-                        searchResults.slice(0, 20).map((result, index) => (
-                            <div key={index} className={styles.resultCard}>
-                                <p className={styles.storeName}>Thrift Store</p>
-                                <p className={styles.subText}>{result.City}</p>
-                                <p className={styles.subText}>{result.Code}</p>
-                            </div>
-                        ))
-                    )}
-                    {!isLoading && !error && searchResults.length === 0 && (
-                        <p>No results found.</p>
-                    )}
+                    {searchResults.map(result => (
+                        <div key={result.ZipCode}>{result.City}, {result.State}</div>
+                    ))}
                 </div>
             </main>
 
