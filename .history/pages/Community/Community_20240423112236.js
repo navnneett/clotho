@@ -47,13 +47,7 @@ export default function Community() {
             <main className={styles.main}>
                 <div className={styles.pageTitle}>
                     <div onClick={toggleMenu}>
-                        <Image 
-                            src={'/images/menu-burger.png'}
-                            alt="Hamburger menu"
-                            width={50}
-                            height={35}
-                            className={styles.menuIcon}
-                        />
+                        
                     </div>
                     <h1 className={styles.title}>Communication</h1>
                     <Image 
@@ -83,7 +77,12 @@ export default function Community() {
                             data.articles.filter(article => article.title.toLowerCase().includes('fashion')).map((d, index) => {
                                 return(
                                     <div key={index}>
-                                        
+                                        <Image 
+                                            src={d.urlToImage}
+                                            alt="workout image"
+                                            height={230}
+                                            width={320}
+                                        />
                                         <h3 style={{ 
                                             fontFamily: 'var(--roboto-slab-text)', 
                                             color: 'var(--button-highlight-light)', 
