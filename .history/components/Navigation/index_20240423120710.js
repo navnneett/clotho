@@ -68,10 +68,7 @@ export default function Navigation({ toggleMenu }) {
                     <hr />
                     <MenuItem title="Posts" />
                     <MenuItem title="Favourite Fashion Trends" />
-                    <MenuItem title="History"/>
-                    <Link href="/QuizQuestions/QuestionsHome">
-                        <MenuItem title="Take The Quiz" />
-                    </Link>
+                    <MenuItem title="History" />
                     <hr />
                     <Link href="/Setting/Setting">
                         <MenuItem title="Setting" />
