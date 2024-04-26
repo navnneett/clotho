@@ -57,14 +57,6 @@ export default function Setting() {
                     <SettingItemMiddle tittle="Privacy Policy"/>
                     <SettingItemBottom tittle="User Agreement"/>
                 </div>
-
-                <div className={styles.section}>
-                    <p className={styles.sectionHead}>Support and About</p>
-                    <SettingItemTop tittle="Help center"/>
-                    <SettingItemMiddle tittle="Report"/>
-                    <SettingItemMiddle tittle="Contact us"/>
-                    <SettingItemBottom tittle="About us"/>
-                </div>
             </main>
             <BottomNavigation
                 bgColorCollection="var(--button-highlight-light)"

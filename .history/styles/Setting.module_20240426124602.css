@@ -7,7 +7,6 @@
 
 .box {
     min-height: 100vh;
-    padding-bottom: 150px;
 }
 
 .title {
@@ -44,20 +43,7 @@
     width: 430px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
 }
-
-.sectionHead {
-    padding-left: 20px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: rgb(110, 110, 110);
-}
-
-
 
 
 
