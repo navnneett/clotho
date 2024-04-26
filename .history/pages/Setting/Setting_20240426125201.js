@@ -51,19 +51,10 @@ export default function Setting() {
                 </div>
 
                 <div className={styles.section}>
-                    <p className={styles.sectionHead}>Privacy and Policy</p>
-                    <SettingItemTop tittle="Password"/>
-                    <SettingItemMiddle tittle="Two-step security"/>
-                    <SettingItemMiddle tittle="Privacy Policy"/>
-                    <SettingItemBottom tittle="User Agreement"/>
-                </div>
-
-                <div className={styles.section}>
-                    <p className={styles.sectionHead}>Support and About</p>
-                    <SettingItemTop tittle="Help center"/>
-                    <SettingItemMiddle tittle="Report"/>
-                    <SettingItemMiddle tittle="Contact us"/>
-                    <SettingItemBottom tittle="About us"/>
+                    <p className={styles.sectionHead}>Preferences</p>
+                    <SettingItemTop tittle="Language"/>
+                    <SettingItemMiddle tittle="Theme"/>
+                    <SettingItemBottom tittle="Notifications"/>
                 </div>
             </main>
             <BottomNavigation
