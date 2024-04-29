@@ -1,16 +1,15 @@
 import styles from "@/styles/Chart.module.css";
 import React from "react";
-import { RadialBarChart, RadialBar, Legend, Tooltip } from "recharts";
 import Button from "@/components/Button";
 import Link from "next/link";
 import QuizResult from "@/pages/QuizResult"; 
 import Chart from "@/pages/Chart"; 
 
 const QuizEnd = ({ selectedAnswers = [] }) => {
-    // Ensure selectedAnswers is an array
+    
     const safeSelectedAnswers = Array.isArray(selectedAnswers) ? selectedAnswers : [];
 
-    // Function to calculate the result
+   
     const calculateResult = (answers) => {
         console.log("Selected answers:", answers);
 
@@ -58,6 +57,11 @@ const QuizEnd = ({ selectedAnswers = [] }) => {
             </div>
         </div>
     );
+};
+
+export default QuizEnd;
+
+
 };
 
 export default QuizEnd;
