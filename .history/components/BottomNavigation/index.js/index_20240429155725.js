@@ -48,7 +48,7 @@ export default function BottomNavigation(props) {
                     </svg>
                     </Link>
                 </div>
-                <div className={styles.plus} style={{backgroundColor: bgColorPlus, borderRadius: borderStyle}}>
+                <div className={styles.plus} style={{backgroundColor: bgColorPlus, borderRadius: borderStyle, width: iconWidth, height: iconHeight}}>
                     <svg width="81" height="37" viewBox="0 0 81 37" fill="none" xmlns="http://www.w3.org/2000/svg" tabIndex={3} onClick={plusButton}>
                         <rect x="0.603516" y="0.430176" width="80.2522" height="35.7654" rx="17.8827" fill="#8229E0"/>
                         <rect x="27.1733" y="15.6034" width="27.1122" height="5.41899" rx="2.7095" fill="white"/>
@@ -70,7 +70,7 @@ export default function BottomNavigation(props) {
                     </Link>
                 </div>
                 <div className={styles.background}>
-                    <svg width="430" height="90" viewBox="0 0 430 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="430" height="85" viewBox="0 0 430 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="430" height="82" fill="url(#paint0_linear_415_4683)"/>
                         <defs>
                         <linearGradient id="paint0_linear_415_4683" x1="-92.5" y1="-202.887" x2="392.529" y2="223.804" gradientUnits="userSpaceOnUse">

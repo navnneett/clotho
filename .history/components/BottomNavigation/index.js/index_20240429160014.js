@@ -48,7 +48,7 @@ export default function BottomNavigation(props) {
                     </svg>
                     </Link>
                 </div>
-                <div className={styles.plus} style={{backgroundColor: bgColorPlus, borderRadius: borderStyle}}>
+                <div className={styles.plus} style={{backgroundColor: bgColorPlus, borderRadius: borderStyle, width: iconWidth, height: iconHeight}}>
                     <svg width="81" height="37" viewBox="0 0 81 37" fill="none" xmlns="http://www.w3.org/2000/svg" tabIndex={3} onClick={plusButton}>
                         <rect x="0.603516" y="0.430176" width="80.2522" height="35.7654" rx="17.8827" fill="#8229E0"/>
                         <rect x="27.1733" y="15.6034" width="27.1122" height="5.41899" rx="2.7095" fill="white"/>
