@@ -74,8 +74,8 @@ export default function BottomNavigation(props) {
                     <rect width="430" height="82" fill="url(#paint0_linear_415_4683)"/>
                     <defs>
                     <linearGradient id="paint0_linear_415_4683" x1="-92.5" y1="-202.887" x2="392.529" y2="223.804" gradientUnits="userSpaceOnUse">
-                    <stop offset="0.175" stopColor="#DDB8FF" stopOpacity="0.8"/>
-                    <stop offset="0.805" stopColor="#D6EFFF" stopOpacity="0.8"/>
+                    <stop offset="0.175" stop-color="#DDB8FF" stop-opacity="0.8"/>
+                    <stop offset="0.805" stop-color="#D6EFFF" stop-opacity="0.8"/>
                     </linearGradient>
                     </defs>
                 </svg>
