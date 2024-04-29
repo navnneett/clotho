@@ -1,41 +1,54 @@
 import styles from "@/styles/Chart.module.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { RadialBarChart, RadialBar, Legend, Tooltip } from "recharts";
 import Button from "@/components/Button";
 import Link from "next/link";
+import QuizResult from "@/pages/QuizResult"; 
+import Chart from "@/pages/Chart"; 
 
+const QuizEnd = ({ selectedAnswers = [] }) => {
+    // Ensure selectedAnswers is an array
+    const safeSelectedAnswers = Array.isArray(selectedAnswers) ? selectedAnswers : [];
 
+    // Function to calculate the result
+    const calculateResult = (answers) => {
+        console.log("Selected answers:", answers);
 
-const QuizEnd = ({ selectedAnswers }) => {
-    const calculateResult = (selectedAnswers) => {
-        console.log("Selected answers:", selectedAnswers);
-        
         const resultMapping = {
-            'A': 'Classic and Relaxed', 
-            'B': 'Trendy and Seasonable', 
+            'A': 'Classic and Relaxed',
+            'B': 'Trendy and Seasonable',
             'C': 'Practical and Active',
             'D': 'Comfortable and Elegant',
         };
 
-        const lastAnswer = selectedAnswers[selectedAnswers.length - 1];
-        return resultMapping[lastAnswer];
+       
+        const lastAnswer = safeSelectedAnswers.length > 0 ? safeSelectedAnswers[safeSelectedAnswers.length - 1] : null;
+        
+        return resultMapping[lastAnswer] || "Unknown";
     };
 
-   
-    const resultType = selectedAnswers[selectedAnswers.length - 1];
+    
+    const resultType = safeSelectedAnswers.length > 0 ? safeSelectedAnswers[safeSelectedAnswers.length - 1] : "Unknown";
 
     return (
         <div className={styles.mainContainer}>
             <div className={styles.contentContainer}>
                 <h1>Congratulations</h1>
 
-                <p>Your Ideal Outfit Type is {calculateResult(selectedAnswers)}</p>
+                <p>Your Ideal Outfit Type is {calculateResult(safeSelectedAnswers)}</p>
 
-                <QuizResult resultType={resultType} />
+                {/* Only render if resultType is valid */}
+                {resultType !== "Unknown" && (
+                    <>
+                        <QuizResult resultType={resultType} />
+                        <Chart resultType={resultType} />
+                    </>
+                )}
 
-                <Chart resultType={resultType} />
-
-                {/* Add mascot or other content here */}
+                
+                {resultType === "Unknown" && (
+                    <p>Unable to determine your ideal outfit type. Please check your answers.</p>
+                )}
 
                 <div className={styles.buttonPosition}>
                     <Link href={'/'}>
@@ -48,3 +61,4 @@ const QuizEnd = ({ selectedAnswers }) => {
 };
 
 export default QuizEnd;
+
