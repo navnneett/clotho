@@ -39,7 +39,7 @@ export default function Inventory() {
                 <div className={styles.mainContainer} >
                     <div className={styles.contentContainer}>
                         <div className={styles.cards}>
-                            <Link href={'/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
+                            <Link href={'/Inventory/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
                                 <InventoryCard 
                                     className={styles.items}
                                     imageURL="/images/inventory/All.png"
@@ -54,7 +54,7 @@ export default function Inventory() {
                                     content="All"
                                 />
                             </Link>
-                            <Link href={'/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
+                            <Link href={'/Inventory/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
                                 <InventoryCard 
                                     className={styles.items}
                                     imageURL="/images/inventory/Shoes.png"
@@ -69,7 +69,7 @@ export default function Inventory() {
                                     content="Shoes"
                                 />
                             </Link>
-                            <Link href={'/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
+                            <Link href={'/Inventory/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
                                 <InventoryCard 
                                     className={styles.items}
                                     imageURL="/images/inventory/T-shirts.png"
@@ -84,7 +84,7 @@ export default function Inventory() {
                                     content="Tops"
                                 />
                             </Link>
-                            <Link href={'/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
+                            <Link href={'/Inventory/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
                                 <InventoryCard 
                                     className={styles.items}
                                     imageURL="/images/inventory/Jeans.png"
@@ -99,7 +99,7 @@ export default function Inventory() {
                                     content="Bottoms"
                                 />
                             </Link>
-                            <Link href={'/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
+                            <Link href={'/Inventory/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
                                 <InventoryCard 
                                     className={styles.items}
                                     imageURL="/images/inventory/Jackets.png"
@@ -114,7 +114,7 @@ export default function Inventory() {
                                     content="Jackets"
                                 />
                             </Link>
-                            <Link href={'/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
+                            <Link href={'/Inventory/Category'} style={{ textDecoration: 'none', textAlign: 'center' }}>
                                 <InventoryCard 
                                     className={styles.items}
                                     imageURL="/images/inventory/Accessories.png"
@@ -146,8 +146,3 @@ export default function Inventory() {
         </>
     );
 }
-
-
-
-
-
