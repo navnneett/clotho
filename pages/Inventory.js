@@ -137,7 +137,7 @@ export default function Inventory() {
                             bgColorInventory="var(--button-highlight-light)"
                             pathColorInventory="var(--white)"
                             borderStyle="60%"
-                            IconWidth={90}
+                            iconWidth={90}
                             iconHeight={36}
                         />
                     </div>

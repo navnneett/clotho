@@ -70,7 +70,7 @@ export default function Setting() {
                 bgColorCollection="var(--button-highlight-light)"
                 pathColorCollection="var(--white)"
                 borderStyle="60%"
-                IconWidth={90}
+                iconWidth={90}
                 iconHeight={36}
             />
         </>

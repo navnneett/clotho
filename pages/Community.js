@@ -120,7 +120,7 @@ export default function Community() {
                             bgColorCommunity="var(--button-highlight-light)"
                             pathColorCommunity="var(--white)"
                             borderStyle="60%"
-                            IconWidth={90}
+                            iconWidth={90}
                             iconHeight={36}
                         />
                     </div>
