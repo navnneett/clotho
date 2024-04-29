@@ -28,7 +28,7 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'onecms-res.cloudinary.com',
+          hostname: 'media.cnn.com',
           port: '',
         },
       ],
