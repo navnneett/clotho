@@ -71,7 +71,7 @@ export default function Overview() {
                 bgColorCollection="var(--button-highlight-light)"
                 pathColorCollection="var(--white)"
                 borderStyle="60%"
-                iconWidth={36}
+                iconWidth={90}
                 iconHeight={36}
             />
         </>

@@ -69,7 +69,7 @@ export default function Home() {
           bgColorHome="var(--button-highlight-light)"
           pathColorHome="var(--white)"
           borderStyle="60%"
-          iconWidth={36}
+          iconWidth={80}
           iconHeight={36}
         />
     </>

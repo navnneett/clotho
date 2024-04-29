@@ -4,7 +4,7 @@
     flex-direction: row;
     align-items: center;
     width: 430px;
-    height: 82px;
+    height: 90px;
     margin: 0;
     position: fixed;
     bottom: 0;
@@ -19,20 +19,12 @@
     bottom: -12px;
 }
 
-.home,.inventory,.plus,.collection {
+.home,.inventory,.plus,.collection,.community {
     position: relative;
     display: flex;
-    justify-content:space-around;
-    padding: 10px;
-    margin: 10px;
-}
-
-.community {
-    position: relative;
-    display: flex;
-    justify-content:space-around;
-    padding: 7px 14px 14px 7px;
-    margin: 10px;
+    justify-content: space-between;
+    padding: 14px;
+    margin: 5px;
 }
 
 .iconHolder {

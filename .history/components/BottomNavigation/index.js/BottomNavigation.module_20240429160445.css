@@ -19,20 +19,11 @@
     bottom: -12px;
 }
 
-.home,.inventory,.plus,.collection {
+.home,.inventory,.plus,.collection,.community {
     position: relative;
     display: flex;
-    justify-content:space-around;
-    padding: 10px;
-    margin: 10px;
-}
-
-.community {
-    position: relative;
-    display: flex;
-    justify-content:space-around;
-    padding: 7px 14px 14px 7px;
-    margin: 10px;
+    padding: 14px 14px 16px 16px;
+    margin: 2px;
 }
 
 .iconHolder {
