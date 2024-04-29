@@ -50,30 +50,30 @@ export default function Navigation({ toggleMenu }) {
                     <Link href="/">
                         <MenuItem title="Home" />
                     </Link>
-                    <Link href="Profile">
+                    <Link href="/Profile/Profile">
                         <MenuItem title="Profile" />
                     </Link>
-                    <Link href="Inventory">
+                    <Link href="/Inventory/Inventory">
                         <MenuItem title="Inventory" />
                     </Link>
-                    <Link href="Calendar">
+                    <Link href="/Calendar/Calendar">
                         <MenuItem title="Calendar" />
                     </Link>
-                    <Link href="Collection">
+                    <Link href="/Collection/Collection">
                         <MenuItem title="Collection" />
                     </Link>
-                    <Link href="ThriftStore">
+                    <Link href="/ThriftStore">
                         <MenuItem title="Thrift Stores" />
                     </Link>
                     <hr />
                     <MenuItem title="Posts" />
                     <MenuItem title="Favourite Fashion Trends" />
                     <MenuItem title="History"/>
-                    <Link href="QuestionsHome">
+                    <Link href="/QuestionsHome">
                         <MenuItem title="Take The Quiz" />
                     </Link>
                     <hr />
-                    <Link href="Setting">
+                    <Link href="/Setting">
                         <MenuItem title="Setting" />
                     </Link>
                     <MenuItem title="Sign Out" />
