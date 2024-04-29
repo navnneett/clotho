@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import { RadialBarChart, RadialBar, Legend, Tooltip } from "recharts";
 import Button from "@/components/Button";
 import Link from "next/link";
-import QuizResult from "@/pages/QuizResult"; 
-import Chart from '@/pages/Chart'
+
 
 
 const QuizEnd = ({ selectedAnswers }) => {
