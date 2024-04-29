@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../../styles/QuestionOne.module.css";
+import styles from "@/styles/QuestionOne.module.css";
 import QuestionTwo from "./QuestionTwo";
 import QuestionThree from "./QuestionThree";
 import QuestionFour from "./QuestionFour";

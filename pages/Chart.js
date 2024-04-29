@@ -1,4 +1,4 @@
-import styles from "../../styles/Chart.module.css";
+import styles from "@/styles/Chart.module.css";
 import React, { useEffect, useState } from "react";
 import { RadialBarChart, RadialBar, Legend, Tooltip, Label, ResponsiveContainer } from "recharts";
 import Button from "@/components/Button";

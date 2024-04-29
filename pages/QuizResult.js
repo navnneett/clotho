@@ -1,5 +1,5 @@
 import React from 'react'; 
-import styles from "../../styles/QuizResult.module.css";
+import styles from "@/styles/QuizResult.module.css";
 
 export default function QuizResult({ resultType }) { 
 

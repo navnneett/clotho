@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../../styles/QuestionTwo.module.css";
+import styles from "@/styles/QuestionTwo.module.css";
 import Button from "@/components/Button";
 import ButtonTwo from "@/components/ButtonTwo";
 import Image from "next/image";

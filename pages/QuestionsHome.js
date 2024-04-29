@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Button from "@/components/Button";
-import styles from "../../styles/QuestionsHome.module.css";
+import styles from "@/styles/QuestionsHome.module.css";
 
 
 export default function QuestionsHome() {
