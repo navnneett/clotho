@@ -47,8 +47,8 @@
     align-items: center;
     justify-content: center;
     width: 430px;
-    position: relative;
-    margin-top: 150px;
+    z-index: -1;
+    position: absolute;
     /* height: calc(100vh -20px); 
     padding-bottom: 20px; */
 }
@@ -121,18 +121,12 @@
 }
 
 .popUp {
-    z-index: 1;
-    
-}
-
-.newContainer {
     z-index: 100;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 430px;
 }
 
+.overlay, 
+.newContainer {
+    z-index: 1;
+
+}
 
