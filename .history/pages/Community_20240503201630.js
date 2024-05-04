@@ -73,8 +73,7 @@ export default function Community() {
                             margin: '30px',
                             padding: '30px',
                             fontFamily: '--open-sans-small',
-                            marginBottom: '50px',
-                            backgroundColor: 'white',
+                            marginBottom: '50px'
                         }}>
                         {
                             data && Array.isArray(data.articles) && 

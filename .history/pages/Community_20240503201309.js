@@ -6,6 +6,7 @@ import styles from '@/styles/Community.module.css'
 import { useState } from "react";
 import axios from 'axios';
 import Navigation from "@/components/Navigation";
+import CommunityOverlay from "@/components/CommunityOverlay";
 
 export default function Community() {
 
@@ -73,43 +74,9 @@ export default function Community() {
                             margin: '30px',
                             padding: '30px',
                             fontFamily: '--open-sans-small',
-                            marginBottom: '50px',
-                            backgroundColor: 'white',
+                            marginBottom: '50px'
                         }}>
-                        {
-                            data && Array.isArray(data.articles) && 
-                            data.articles.filter(article => article.title.toLowerCase().includes('fashion')).map((d, index) => {
-                                return(
-                                    <div key={index} className={styles.overlay}>
-                                        <Image 
-                                            src='/images/news.jpeg'
-                                            alt="workout image"
-                                            height={200}
-                                            width={320}
-                                        />
-                                        <h3 style={{ 
-                                            fontFamily: 'var(--roboto-slab-text)', 
-                                            color: 'var(--button-highlight-light)', 
-                                            fontSize: 'var(--open-sans-medium)', 
-                                            fontWeight: 'bold' 
-                                        }}>{d.title}</h3>
-                                        <p style={{ 
-                                            fontSize: 'var(--open-sans-small)', 
-                                            fontWeight: 'var(--open-sans-weight)' 
-                                        }}>
-                                            {d.description}
-                                        </p>
-                                        <p style={{ 
-                                            fontSize: 'var(--open-sans-small)', 
-                                            fontWeight: 'var(--open-sans-weight)', 
-                                            textAlign: 'right',
-                                        }}>
-                                            {d.author}
-                                            </p>
-                                    </div>
-                                )
-                            })
-                        }
+                            <CommunityOverlay isButtonClicked={isButtonClicked} setIsButtonClicked={setIsButtonClicked} />
                         </div>
                         
                     </div>

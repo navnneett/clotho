@@ -74,7 +74,7 @@ export default function Community() {
                             padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px',
-                            backgroundColor: 'white',
+                            backgroundColor: 'white'
                         }}>
                         {
                             data && Array.isArray(data.articles) && 

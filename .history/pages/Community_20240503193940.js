@@ -36,7 +36,7 @@ export default function Community() {
             })
         }
     }
-    
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Toggle the state
     };
@@ -63,7 +63,7 @@ export default function Community() {
                     </svg>
                 </div>
                 <div className={styles.mainContainer}>
-                    <div className={styles.newContainer}>
+                    <div className={styles.contentContainer}>
                         <div className={styles.popUp} style={{
                             display: 'flex',
                             flexWrap: 'wrap',
@@ -73,8 +73,7 @@ export default function Community() {
                             margin: '30px',
                             padding: '30px',
                             fontFamily: '--open-sans-small',
-                            marginBottom: '50px',
-                            backgroundColor: 'white',
+                            marginBottom: '50px'
                         }}>
                         {
                             data && Array.isArray(data.articles) && 
@@ -111,7 +110,7 @@ export default function Community() {
                             })
                         }
                         </div>
-                        
+
                     </div>
 
                     <div className={styles.contentContainer}>

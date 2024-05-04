@@ -47,8 +47,6 @@
     align-items: center;
     justify-content: center;
     width: 430px;
-    position: relative;
-    margin-top: 150px;
     /* height: calc(100vh -20px); 
     padding-bottom: 20px; */
 }
@@ -120,19 +118,9 @@
     padding-left: 220px;
 }
 
-.popUp {
-    z-index: 1;
-    
-}
-
-.newContainer {
+.overlay {
     z-index: 100;
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 430px;
 }
 
 
