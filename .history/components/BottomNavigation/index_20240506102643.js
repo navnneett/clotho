@@ -44,7 +44,7 @@ export default function BottomNavigation(props) {
                 <div className={styles.inventory} style={{backgroundColor: bgColorInventory, borderRadius: borderStyle, width: iconWidth, height: iconHeight}}>
                     <Link href='/Inventory'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="41" height="34" viewBox="0 0 41 34" fill="none" tabIndex={2}>
-                        <path style={{ stroke: pathColorInventory}} d="M20.5047 14L24.699 11.0962C26.9616 9.5123 27.5115 6.39457 25.9272 4.13255C24.3429 1.87052 21.2244 1.32078 18.9618 2.90467C16.6992 4.48856 16.5037 6.6254 16.5037 6.6254M20.5 14L37.7608 26.5755C40.1083 28.2858 38.8982 32 35.9935 32H5.00652C2.10181 32 0.891726 28.2858 3.23923 26.5755L20.5 14Z" stroke="#8229E0" strokeWidth="4" strokeLinecap="round"/>
+                        <path style={{ stroke: pathColorHome}} d="M20.5047 14L24.699 11.0962C26.9616 9.5123 27.5115 6.39457 25.9272 4.13255C24.3429 1.87052 21.2244 1.32078 18.9618 2.90467C16.6992 4.48856 16.5037 6.6254 16.5037 6.6254M20.5 14L37.7608 26.5755C40.1083 28.2858 38.8982 32 35.9935 32H5.00652C2.10181 32 0.891726 28.2858 3.23923 26.5755L20.5 14Z" stroke="#8229E0" strokeWidth="4" strokeLinecap="round"/>
                     </svg>
                     </Link>
                 </div>
@@ -58,7 +58,7 @@ export default function BottomNavigation(props) {
                 <div className={styles.collection} style={{backgroundColor: bgColorCollection, borderRadius: borderStyle, width: iconWidth, height: iconHeight}}>
                     <Link href='/Overview'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="44" height="42" viewBox="0 0 44 42" fill="none" tabIndex={4}>
-                        <path style={{ stroke: pathColorCollection}} d="M22 39L19.1 36.3384C8.8 26.9221 2 20.7117 2 13.0899C2 6.87956 6.84 2 13 2C16.48 2 19.82 3.63324 22 6.21417C24.18 3.63324 27.52 2 31 2C37.16 2 42 6.87956 42 13.0899C42 20.7117 35.2 26.9221 24.9 36.3586L22 39Z" stroke="#8229E0" strokeWidth="4"/>
+                        <path style={{ stroke: pathColorHome}} d="M22 39L19.1 36.3384C8.8 26.9221 2 20.7117 2 13.0899C2 6.87956 6.84 2 13 2C16.48 2 19.82 3.63324 22 6.21417C24.18 3.63324 27.52 2 31 2C37.16 2 42 6.87956 42 13.0899C42 20.7117 35.2 26.9221 24.9 36.3586L22 39Z" stroke="#8229E0" strokeWidth="4"/>
                     </svg>
                     </Link>
                 </div>

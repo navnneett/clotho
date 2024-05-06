@@ -29,9 +29,9 @@
 .box {
     margin: 0;
     padding: 0;
-    z-index: 1005;
+    z-index: 1000;
     position: fixed;
-    left: 49.15%;
+    left: 48.75%;
     transform: translateX(-50%);
     width: 350px;
     bottom: 105px;
@@ -40,7 +40,7 @@
 
 .background {
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     width: 430px;
     height: 852px;
     background: rgb(0, 0, 0, 0.5);

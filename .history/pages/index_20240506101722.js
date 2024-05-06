@@ -37,6 +37,15 @@ export default function Home() {
         </div>
         
         <div className={styles.contentContainer}>
+          <div className={styles.hello}>
+          <Image
+            className={styles.userAvatar}
+            src="/images/user-image.png"
+            alt="user images"
+            width={92}
+            height={92}
+          />
+          </div>
           
           <CollectionCard
               title="Summer Outfits"

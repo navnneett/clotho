@@ -28,24 +28,12 @@
     margin: 10px;
 }
 
-.inventory {
-    position: relative;
-    display: flex;
-    justify-content:space-around;
-    padding: 10px;
-    padding-right: 13px;
-    padding-bottom: 15px;
-    margin: 10px;
-}
-
+.inventory,
 .collection {
     position: relative;
     display: flex;
     justify-content:space-around;
     padding: 10px;
-    padding-right: 18px;
-    padding-top: 15px;
-    padding-bottom: 14px;
     margin: 10px;
 }
 
