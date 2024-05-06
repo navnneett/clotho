@@ -94,7 +94,7 @@ export default function Profile() {
                         </>
                     ) : (
                         <Image 
-                            src="/images/user-image.png"
+                            src={avatar}
                             alt="User's avatar"
                             width={185}
                             height={185}

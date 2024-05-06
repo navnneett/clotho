@@ -78,13 +78,11 @@ export default function Profile() {
                 <div className={styles.topInfo}>
                     {isEditing ? (
                         <>
-                            <Image 
-                                src="/images/user-image.png"
-                                alt="User's avatar"
-                                width={185}
-                                height={185}
-                                className={styles.avatarFix}
-                            />
+                            <svg width="22" height="6" viewBox="0 0 22 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="3" cy="3" r="3" fill="#A5A5A5"/>
+                                        <circle cx="11" cy="3" r="3" fill="#A5A5A5"/>
+                                        <circle cx="19" cy="3" r="3" fill="#A5A5A5"/>
+                                    </svg>
                             <input
                                 type="file"
                                 accept="image/*" // Specify that only image files are accepted
@@ -94,7 +92,7 @@ export default function Profile() {
                         </>
                     ) : (
                         <Image 
-                            src="/images/user-image.png"
+                            src={avatar}
                             alt="User's avatar"
                             width={185}
                             height={185}

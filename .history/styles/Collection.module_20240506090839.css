@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+.box {
+    min-height: 100vh;
+    padding-bottom: 200px;
+    width: 430px;
+}
+
 .menuIcon {
     padding-top: 20px;
     padding-right: 33px;
