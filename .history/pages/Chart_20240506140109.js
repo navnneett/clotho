@@ -112,6 +112,7 @@ export default function Chart({ resultType }) {
                                 endAngle={0}
                                 cx={120}
                                 cy={140}
+                                paddingLeft={10}
                             >
                                 <RadialBar minAngle={15} label={{ fill: 'var(--button-linear-light)', position: 'insideStart' }} background clockWise={true} dataKey='percentage' />
                                 <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' align="right"/>

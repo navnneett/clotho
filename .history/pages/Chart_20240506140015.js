@@ -103,15 +103,15 @@ export default function Chart({ resultType }) {
 
                     <div className={styles.chartContent}>
                         {isClient && 
-                        <ResponsiveContainer width={350} height={250}>
+                        <ResponsiveContainer width={340} height={250}>
                             <RadialBarChart  
                                 innerRadius="20%" 
                                 outerRadius="90%" 
                                 data={dataToShow} 
                                 startAngle={180} 
                                 endAngle={0}
-                                cx={120}
-                                cy={140}
+                                cx={140}
+                                cy={170}
                             >
                                 <RadialBar minAngle={15} label={{ fill: 'var(--button-linear-light)', position: 'insideStart' }} background clockWise={true} dataKey='percentage' />
                                 <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' align="right"/>
