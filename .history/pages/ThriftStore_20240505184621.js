@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Image from "next/image";
-import BottomNavigation from "@/components/BottomNavigation/index.js";
+import BottomNavigation from '@/components/BottomNavigation';
 import styles from '@/styles/ThriftStore.module.css';
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Navigation"; // Import the Navigation component
 
 export default function ThriftStore() {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +15,18 @@ export default function ThriftStore() {
     const [error, setError] = useState(null);
     const [ isButtonClicked, setIsButtonClicked ] = useState(false);
 
-    const thriftStoreNames = ["Value Village", "Revival", "Thrift & Fund", "Value Village"];
-
     var apiKey = process.env.NEXT_PUBLIC_API_ZIPCODE;
 
     const url = `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${searchQuery}&minimumradius=0&maximumradius=2&country=Canada&key=${apiKey}`;
     
+    const thriftStoreNames = ["Value Village", "Revival", "Thrift & Fund", "Value Village"];
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const getRandomThriftStoreName = () => {
+        return thriftStoreNames[Math.floor(Math.random() * thriftStoreNames.length)];
     };
 
     const handleSearch = async () => {
@@ -46,10 +50,6 @@ export default function ThriftStore() {
         }
     };
     
-    const getRandomThriftStoreName = () => {
-        return thriftStoreNames[Math.floor(Math.random() * thriftStoreNames.length)];
-    };
-
     return (
         <>
             {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
@@ -98,14 +98,13 @@ export default function ThriftStore() {
                     {!isLoading && !error && searchResults.length > 0 && (
                         searchResults.slice(0, 20).map((result, index) => (
                             <div key={index} className={styles.resultCard}>
-                                <p className={styles.storeName}>{getRandomThriftStoreName()}</p>
-                                <p className={styles.subText}>{result.City}</p>
-                                <p className={styles.subText}>{result.Code}</p>
+                                <p className={styles.storeName}>{result.storeName}</p>
+                                <p className={styles.subText}>{result.address}</p>
                             </div>
                         ))
                     )}
                     {!isLoading && !error && searchResults.length === 0 && (
-                        <p className={styles.noZip}>Input your ZIP code/ postal code to search the nearby thrift stores.</p>
+                        <p>No results found.</p>
                     )}
                 </div>
             </main>
@@ -114,5 +113,6 @@ export default function ThriftStore() {
         </>
     )
 }
+
 
 

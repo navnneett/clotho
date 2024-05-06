@@ -3,7 +3,7 @@ import axios from 'axios';
 import Image from "next/image";
 import BottomNavigation from "@/components/BottomNavigation/index.js";
 import styles from '@/styles/ThriftStore.module.css';
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Navigation"; // Import the Navigation component
 
 export default function ThriftStore() {
     const [isOpen, setIsOpen] = useState(false);
