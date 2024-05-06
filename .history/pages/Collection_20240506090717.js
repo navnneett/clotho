@@ -113,6 +113,8 @@ export default function Collection() {
                         </div>
                     </div>
                 </div>
+
+                <br/>
             </main>
             <BottomNavigation
                 bgColorCollection="var(--button-highlight-light)"

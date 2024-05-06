@@ -113,6 +113,8 @@ export default function Collection() {
                         </div>
                     </div>
                 </div>
+
+                <div className={styles.space}></div>
             </main>
             <BottomNavigation
                 bgColorCollection="var(--button-highlight-light)"

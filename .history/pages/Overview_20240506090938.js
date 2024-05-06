@@ -19,7 +19,7 @@ export default function Overview() {
         <>
         <Head title="Overview" description="Overview of Clotho." />
              {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
-            <main className={`${styles.main} ${styles.box}`}>
+            <main className={`${styles.chip} ${styles.carouselContainer}`}>
                 <div className={styles.pageTitle}>
                     <div onClick={toggleMenu}>
                         <Image 
