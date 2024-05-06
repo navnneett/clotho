@@ -79,23 +79,23 @@ export default function Community() {
                 </div>
                 <div className={styles.mainContainer}>
                     <div className={styles.newContainer}>
-                        <div className={styles.popUp} style={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            gap: '20px',
-                            justifyContent: 'center',
-                            border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '30px',
-                            padding: '30px',
-                            fontFamily: '--open-sans-small',
-                            marginBottom: '50px',
-                            backgroundColor: 'white',
-                        }}>
+                        <div>
                         {
                             data && Array.isArray(data.articles) && 
                             data.articles.filter(article => article.title.toLowerCase().includes('fashion')).map((d, index) => {
                                 return(
-                                    <div>
+                                    <div div className={styles.popUp} style={{
+                                        display: 'flex',
+                                        flexWrap: 'wrap',
+                                        gap: '20px',
+                                        justifyContent: 'center',
+                                        border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
+                                        margin: '30px',
+                                        padding: '30px',
+                                        fontFamily: '--open-sans-small',
+                                        marginBottom: '50px',
+                                        backgroundColor: 'white'
+                                    }}>
                                         <div key={index} className={styles.overlay}>
                                             <Image 
                                                 src='/images/news.jpeg'

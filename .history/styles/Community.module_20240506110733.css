@@ -121,7 +121,8 @@
 }
 
 .popUp {
-    overflow: hidden;
+    overflow: auto;
+    min-height: 500px;
 }
 
 .newContainer {
