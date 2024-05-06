@@ -96,26 +96,26 @@ export default function Community() {
                             data.articles.filter(article => article.title.toLowerCase().includes('fashion')).map((d, index) => {
                                 return(
                                     <div>
-                                        <div key={index} className={styles.overlay}>
+                                        <div key={index.id} className={styles.overlay}>
                                             <Image 
                                                 src='/images/news.jpeg'
                                                 alt="workout image"
                                                 height={200}
                                                 width={320}
                                             />
-                                            <h3 style={{ 
+                                            <h3 key={index.name} style={{ 
                                                 fontFamily: 'var(--roboto-slab-text)', 
                                                 color: 'var(--button-highlight-light)', 
                                                 fontSize: 'var(--open-sans-medium)', 
                                                 fontWeight: 'bold' 
                                             }}>{d.title}</h3>
-                                            <p style={{ 
+                                            <p key={index} style={{ 
                                                 fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)' 
                                             }}>
                                                 {d.description}
                                             </p>
-                                            <p style={{ 
+                                            <p key={index.source} style={{ 
                                                 fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)', 
                                                 textAlign: 'right',
