@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Image from "next/image";
-import BottomNavigation from "@/components/BottomNavigation/index.js";
+import BottomNavigation from '@/components/BottomNavigation';
 import styles from '@/styles/ThriftStore.module.css';
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Navigation"; // Import the Navigation component
 
 export default function ThriftStore() {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,42 +14,46 @@ export default function ThriftStore() {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [ isButtonClicked, setIsButtonClicked ] = useState(false);
-
-    const thriftStoreNames = ["Value Village", "Revival", "Thrift & Fund", "Value Village"];
+    const [zipCodesApiAddress, setZipCodesApiAddress] = useState('');
+    const [zippopotamAddress, setZippopotamAddress] = useState('');
 
     var apiKey = process.env.NEXT_PUBLIC_API_ZIPCODE;
 
     const url = `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${searchQuery}&minimumradius=0&maximumradius=2&country=Canada&key=${apiKey}`;
     
+    const thriftStoreNames = ["Value Village", "Revival", "Thrift & Fund", "Value Village"];
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleSearch = async () => {
-        if(isButtonClicked) {
-            setData(null);
-            setIsButtonClicked(false);
-        } else {
-            axios.get(url)
-                .then((response) => {
-                    const { DataList } = response.data; 
-                    setSearchResults(DataList); 
-                    setIsButtonClicked(true);
-                    console.log(DataList);
-                }).catch(err => {
-                    console.log(err);
-                    setError(err);
-                })
-                .finally(() => {
-                    setIsLoading(false);
-                });
-        }
-    };
-    
     const getRandomThriftStoreName = () => {
         return thriftStoreNames[Math.floor(Math.random() * thriftStoreNames.length)];
     };
 
+    const handleSearch = async () => {
+        setIsLoading(true);
+        setError(null);
+
+        try {
+            const zipCodesApiResponse = await axios.get(url);
+            const zipCodesApiAddress = zipCodesApiResponse.data.DataList[0].City;
+            setZipCodesApiAddress(zipCodesApiAddress);
+
+            const zippopotamResponse = await axios.get(`https://api.zippopotam.us/CA/${zipCode}`);
+            const zippopotamAddress = `${zippopotamResponse.data.places[0]['place name']}, ${zippopotamResponse.data.places[0].state}, ${zippopotamResponse.data.places[0]['post code']}`;
+            setZippopotamAddress(zippopotamAddress);
+
+            setError(null);
+        } catch (error) {
+            setError('An error occurred while fetching the address');
+            console.error(error);
+        } finally {
+            setIsLoading(false);
+            setIsButtonClicked(true);
+        }
+    };
+    
     return (
         <>
             {isMenuOpen && <Navigation toggleMenu={toggleMenu} />}
@@ -65,7 +69,7 @@ export default function ThriftStore() {
                             className={styles.menuIcon}
                         />
                     </div>
-                    <h1 className={styles.title}>Thrift Store</h1>
+                    <h1 className={styles.title}>Village Value</h1>
                     <Image 
                         src={'/images/user-light.png'}
                         alt="User icon"
@@ -98,14 +102,13 @@ export default function ThriftStore() {
                     {!isLoading && !error && searchResults.length > 0 && (
                         searchResults.slice(0, 20).map((result, index) => (
                             <div key={index} className={styles.resultCard}>
-                                <p className={styles.storeName}>{getRandomThriftStoreName()}</p>
-                                <p className={styles.subText}>{result.City}</p>
-                                <p className={styles.subText}>{result.Code}</p>
+                                <p className={styles.storeName}>{result.storeName}</p>
+                                    <p className={styles.subText}>{result.address}</p>
                             </div>
                         ))
                     )}
                     {!isLoading && !error && searchResults.length === 0 && (
-                        <p className={styles.noZip}>Input your ZIP code/ postal code to search the nearby thrift stores.</p>
+                        <p>No results found.</p>
                     )}
                 </div>
             </main>
@@ -114,5 +117,6 @@ export default function ThriftStore() {
         </>
     )
 }
+
 
 

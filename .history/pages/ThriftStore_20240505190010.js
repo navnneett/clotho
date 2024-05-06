@@ -4,6 +4,7 @@ import Image from "next/image";
 import BottomNavigation from "@/components/BottomNavigation/index.js";
 import styles from '@/styles/ThriftStore.module.css';
 import Navigation from "@/components/Navigation";
+import OpenCageGeocode from 'opencage-api-client';
 
 export default function ThriftStore() {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,11 +32,27 @@ export default function ThriftStore() {
             setIsButtonClicked(false);
         } else {
             axios.get(url)
-                .then((response) => {
+                .then(async (response) => {
                     const { DataList } = response.data; 
                     setSearchResults(DataList); 
                     setIsButtonClicked(true);
-                    console.log(DataList);
+
+                    // Convert ZIP codes to actual addresses
+                    const addresses = await Promise.all(DataList.map(async (result) => {
+                        const { Latitude, Longitude, ZipCode } = result; // Change 'Code' to 'ZipCode'
+                        try {
+                            const addressData = await OpenCageGeocode.reverseGeocode({
+                                q: `${Latitude},${Longitude}`,
+                                key: '20c2357248c043928442f4808e56d3c0',
+                            });
+                            return addressData.results[0].formatted;
+                        } catch (error) {
+                            console.error('Error converting ZIP code to address:', error);
+                            return null;
+                        }
+                    }));
+
+                    console.log(addresses);
                 }).catch(err => {
                     console.log(err);
                     setError(err);
