@@ -23,7 +23,7 @@ export default function Community() {
     const url = `https://newsapi.org/v2/everything?q=${type}&from=${date}&sortBy=${sortBy}&apiKey=${apiKey}`;
 
     const GrabNews = () => {
-        if (isButtonClicked) {
+        if(isButtonClicked) {
             setData(null);
             setIsButtonClicked(false);
         } else {
@@ -32,13 +32,12 @@ export default function Community() {
                 // console.clear();
                 setData(response.data);
                 setIsButtonClicked(true);
-                console.log("Fetched data:", response.data);
-                toggleNotification();
+                console.log(response.data);
             }).catch(err => {
                 console.log(err)
             })
         }
-    };
+    }
     
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Toggle the state
@@ -46,8 +45,6 @@ export default function Community() {
 
     const toggleNotification = () => {
         setIsNotificationOpen(!isNotificationOpen);
-        console.log("Notification state toggled. isNotificationOpen:", !isNotificationOpen);
-        console.log("New state value:", isNotificationOpen);
     };
     
     return (
@@ -92,37 +89,35 @@ export default function Community() {
                             backgroundColor: 'white',
                         }}>
                         {
-                            data && Array.isArray(data.articles) && 
+                            isNotificationOpen && data && Array.isArray(data.articles) && 
                             data.articles.filter(article => article.title.toLowerCase().includes('fashion')).map((d, index) => {
                                 return(
-                                    <div>
-                                        <div key={index} className={styles.overlay}>
-                                            <Image 
-                                                src='/images/news.jpeg'
-                                                alt="workout image"
-                                                height={200}
-                                                width={320}
-                                            />
-                                            <h3 style={{ 
-                                                fontFamily: 'var(--roboto-slab-text)', 
-                                                color: 'var(--button-highlight-light)', 
-                                                fontSize: 'var(--open-sans-medium)', 
-                                                fontWeight: 'bold' 
-                                            }}>{d.title}</h3>
-                                            <p style={{ 
-                                                fontSize: 'var(--open-sans-small)', 
-                                                fontWeight: 'var(--open-sans-weight)' 
-                                            }}>
-                                                {d.description}
+                                    <div key={index} className={styles.overlay}>
+                                        <Image 
+                                            src='/images/news.jpeg'
+                                            alt="workout image"
+                                            height={200}
+                                            width={320}
+                                        />
+                                        <h3 style={{ 
+                                            fontFamily: 'var(--roboto-slab-text)', 
+                                            color: 'var(--button-highlight-light)', 
+                                            fontSize: 'var(--open-sans-medium)', 
+                                            fontWeight: 'bold' 
+                                        }}>{d.title}</h3>
+                                        <p style={{ 
+                                            fontSize: 'var(--open-sans-small)', 
+                                            fontWeight: 'var(--open-sans-weight)' 
+                                        }}>
+                                            {d.description}
+                                        </p>
+                                        <p style={{ 
+                                            fontSize: 'var(--open-sans-small)', 
+                                            fontWeight: 'var(--open-sans-weight)', 
+                                            textAlign: 'right',
+                                        }}>
+                                            {d.author}
                                             </p>
-                                            <p style={{ 
-                                                fontSize: 'var(--open-sans-small)', 
-                                                fontWeight: 'var(--open-sans-weight)', 
-                                                textAlign: 'right',
-                                            }}>
-                                                {d.author}
-                                                </p>
-                                        </div>
                                     </div>
                                 )
                             })

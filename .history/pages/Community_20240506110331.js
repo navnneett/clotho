@@ -95,34 +95,32 @@ export default function Community() {
                             data && Array.isArray(data.articles) && 
                             data.articles.filter(article => article.title.toLowerCase().includes('fashion')).map((d, index) => {
                                 return(
-                                    <div>
-                                        <div key={index} className={styles.overlay}>
-                                            <Image 
-                                                src='/images/news.jpeg'
-                                                alt="workout image"
-                                                height={200}
-                                                width={320}
-                                            />
-                                            <h3 style={{ 
-                                                fontFamily: 'var(--roboto-slab-text)', 
-                                                color: 'var(--button-highlight-light)', 
-                                                fontSize: 'var(--open-sans-medium)', 
-                                                fontWeight: 'bold' 
-                                            }}>{d.title}</h3>
-                                            <p style={{ 
-                                                fontSize: 'var(--open-sans-small)', 
-                                                fontWeight: 'var(--open-sans-weight)' 
-                                            }}>
-                                                {d.description}
+                                    <div key={index} className={styles.overlay}>
+                                        <Image 
+                                            src='/images/news.jpeg'
+                                            alt="workout image"
+                                            height={200}
+                                            width={320}
+                                        />
+                                        <h3 style={{ 
+                                            fontFamily: 'var(--roboto-slab-text)', 
+                                            color: 'var(--button-highlight-light)', 
+                                            fontSize: 'var(--open-sans-medium)', 
+                                            fontWeight: 'bold' 
+                                        }}>{d.title}</h3>
+                                        <p style={{ 
+                                            fontSize: 'var(--open-sans-small)', 
+                                            fontWeight: 'var(--open-sans-weight)' 
+                                        }}>
+                                            {d.description}
+                                        </p>
+                                        <p style={{ 
+                                            fontSize: 'var(--open-sans-small)', 
+                                            fontWeight: 'var(--open-sans-weight)', 
+                                            textAlign: 'right',
+                                        }}>
+                                            {d.author}
                                             </p>
-                                            <p style={{ 
-                                                fontSize: 'var(--open-sans-small)', 
-                                                fontWeight: 'var(--open-sans-weight)', 
-                                                textAlign: 'right',
-                                            }}>
-                                                {d.author}
-                                                </p>
-                                        </div>
                                     </div>
                                 )
                             })

@@ -121,7 +121,7 @@
 }
 
 .popUp {
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .newContainer {
