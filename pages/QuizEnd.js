@@ -2,48 +2,59 @@ import styles from "@/styles/QuizEnd.module.css";
 import Button from "@/components/Button";
 import Link from "next/link";
 import QuizResult from "./QuizResult"; 
-import Chart from './Chart';
-
+import Chart from "./Chart";
 
 const QuizEnd = ({ selectedAnswers }) => {
-    const calculateResult = (selectedAnswers) => {
-        console.log("Selected answers:", selectedAnswers);
-        
-        const resultMapping = {
-            'A': 'Classic and Relaxed', 
-            'B': 'Trendy and Seasonable', 
-            'C': 'Practical and Active',
-            'D': 'Comfortable and Elegant',
-        };
+  // Ensure selectedAnswers is a valid array with at least one element
+  if (!Array.isArray(selectedAnswers) || selectedAnswers.length === 0) {
+    return (
+      <div className={styles.mainContainer}>
+        <div className={styles.contentContainer}>
+          <h1>Quiz Result</h1>
+          <p>No results available. Please complete the quiz to get your result.</p>
+          <Link href="/">
+            <Button title="Back to Home" />
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
-        const lastAnswer = selectedAnswers[selectedAnswers.length - 1];
-        return resultMapping[lastAnswer];
+  const calculateResult = (answers) => {
+    console.log("Selected answers:", answers);
+    
+    const resultMapping = {
+      A: 'Classic and Relaxed', 
+      B: 'Trendy and Seasonable', 
+      C: 'Practical and Active',
+      D: 'Comfortable and Elegant',
     };
 
-   
-    const resultType = selectedAnswers[selectedAnswers.length - 1];
+    const lastAnswer = answers[answers.length - 1];
+    return resultMapping[lastAnswer] || 'Unknown'; // Default fallback if mapping doesn't contain the key
+  };
 
-    return (
-        <div className={styles.mainContainer}>
-            <div className={styles.contentContainer}>
-                <h1>Congratulations</h1>
-                <p>Your Ideal Outfit Type is {calculateResult(selectedAnswers)}</p>
-                
-                <QuizResult resultType={resultType} />
-                {/* Add mascot or other content here */}
+  const resultType = selectedAnswers[selectedAnswers.length - 1];
 
-                <Chart resultType={resultType} />
+  return (
+    <div className={styles.mainContainer}>
+      <div className={styles.contentContainer}>
+        <h1>Congratulations</h1>
+        <p>Your Ideal Outfit Type is {calculateResult(selectedAnswers)}</p>
+        
+        <QuizResult resultType={resultType} />
+        {/* You can add additional content here, such as a mascot or additional results */}
 
-                <div className={styles.finishButtonContainer}>
-                    <Link href={'/QuizQuestions/Chart'}>
-                        <Button title="Finish"/>
-                    </Link>
-                </div>
-            </div>
+        <Chart resultType={resultType} />
+
+        <div className={styles.finishButtonContainer}>
+          <Link href="/QuizQuestions/Chart">
+            <Button title="Finish" />
+          </Link>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default QuizEnd;
-
-
