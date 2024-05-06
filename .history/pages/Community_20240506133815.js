@@ -96,7 +96,7 @@ export default function Community() {
                             data.articles.filter(article => article.title.toLowerCase().includes('fashion')).map((d, index) => {
                                 return(
                                     <div>
-                                        <div key={index} className={styles.overlay}>
+                                        <div key={index.id} className={styles.overlay}>
                                             <Image 
                                                 src='/images/news.jpeg'
                                                 alt="workout image"
