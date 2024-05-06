@@ -43,8 +43,8 @@ export default function BottomNavigation(props) {
                 </div>
                 <div className={styles.inventory} style={{backgroundColor: bgColorInventory, borderRadius: borderStyle, width: iconWidth, height: iconHeight}}>
                     <Link href='/Inventory'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="34" viewBox="0 0 41 34" fill="none" tabIndex={2}>
-                        <path style={{ stroke: pathColorInventory}} d="M20.5047 14L24.699 11.0962C26.9616 9.5123 27.5115 6.39457 25.9272 4.13255C24.3429 1.87052 21.2244 1.32078 18.9618 2.90467C16.6992 4.48856 16.5037 6.6254 16.5037 6.6254M20.5 14L37.7608 26.5755C40.1083 28.2858 38.8982 32 35.9935 32H5.00652C2.10181 32 0.891726 28.2858 3.23923 26.5755L20.5 14Z" stroke="#8229E0" strokeWidth="4" strokeLinecap="round"/>
+                    <svg width="41" height="42" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg" tabIndex={2}>
+                        <path style={{ stroke: pathColorInventory}} d="M35.4792 12.1274L19.307 21.1062M19.307 21.1062L3.13484 12.1274M19.307 21.1062L19.3071 39.1696M36.4306 21.1063V13.3893C36.4306 12.7378 36.4306 12.4121 36.3346 12.1215C36.2496 11.8645 36.1107 11.6286 35.9271 11.4295C35.7196 11.2045 35.4347 11.0463 34.8648 10.7299L20.7855 2.91305C20.2459 2.61346 19.9761 2.46367 19.6904 2.40495C19.4375 2.35297 19.1767 2.35297 18.9238 2.40495C18.6381 2.46367 18.3683 2.61347 17.8287 2.91305L3.74939 10.7299C3.17952 11.0463 2.89457 11.2045 2.68709 11.4295C2.50353 11.6286 2.36462 11.8645 2.27965 12.1215C2.18359 12.4121 2.18359 12.7378 2.18359 13.3893V28.8232C2.18359 29.4747 2.18359 29.8005 2.27965 30.091C2.36462 30.348 2.50353 30.5839 2.68709 30.783C2.89457 31.008 3.17953 31.1662 3.74939 31.4826L17.8287 39.2995C18.3683 39.5991 18.6381 39.7488 18.9238 39.8076C19.1767 39.8595 19.4375 39.8595 19.6904 39.8076C19.9761 39.7488 20.2459 39.5991 20.7855 39.2995L21.2097 39.0639M10.7453 6.84575L27.8689 16.3528M38.3332 39.1696L36.4306 37.2682M38.3332 32.5147C38.3332 35.665 35.7777 38.2189 32.6254 38.2189C29.473 38.2189 26.9176 35.665 26.9176 32.5147C26.9176 29.3643 29.473 26.8105 32.6254 26.8105C35.7777 26.8105 38.3332 29.3643 38.3332 32.5147Z" stroke="#8229E0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     </Link>
                 </div>
@@ -57,8 +57,8 @@ export default function BottomNavigation(props) {
                 </div>
                 <div className={styles.collection} style={{backgroundColor: bgColorCollection, borderRadius: borderStyle, width: iconWidth, height: iconHeight}}>
                     <Link href='/Overview'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="42" viewBox="0 0 44 42" fill="none" tabIndex={4}>
-                        <path style={{ stroke: pathColorCollection}} d="M22 39L19.1 36.3384C8.8 26.9221 2 20.7117 2 13.0899C2 6.87956 6.84 2 13 2C16.48 2 19.82 3.63324 22 6.21417C24.18 3.63324 27.52 2 31 2C37.16 2 42 6.87956 42 13.0899C42 20.7117 35.2 26.9221 24.9 36.3586L22 39Z" stroke="#8229E0" strokeWidth="4"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="42" viewBox="0 0 44 42" fill="none">
+                        <path d="M22 39L19.1 36.3384C8.8 26.9221 2 20.7117 2 13.0899C2 6.87956 6.84 2 13 2C16.48 2 19.82 3.63324 22 6.21417C24.18 3.63324 27.52 2 31 2C37.16 2 42 6.87956 42 13.0899C42 20.7117 35.2 26.9221 24.9 36.3586L22 39Z" stroke="#8229E0" stroke-width="4"/>
                     </svg>
                     </Link>
                 </div>

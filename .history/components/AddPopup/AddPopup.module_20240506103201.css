@@ -40,7 +40,7 @@
 
 .background {
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     width: 430px;
     height: 852px;
     background: rgb(0, 0, 0, 0.5);

@@ -50,10 +50,13 @@ export default function Category() {
                         </svg>
                     </div>
                     <h1 className={styles.title}>Wardrobe</h1>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="35" viewBox="0 0 32 35" fill="none" className={styles.userIcon}>
-                        <path d="M24 8.75C24 13.0038 20.445 16.5 16 16.5C11.555 16.5 8 13.0038 8 8.75C8 4.49616 11.555 1 16 1C20.445 1 24 4.49616 24 8.75Z" stroke="#0B0014" stroke-width="2"/>
-                        <path d="M1 35V27.4167C1 23.5507 4.13401 20.4167 8 20.4167H24C27.866 20.4167 31 23.5507 31 27.4167V35" stroke="#0B0014" stroke-width="2"/>
-                    </svg>
+                    <Image 
+                        src={'/images/user-light.png'}
+                        alt="User icon"
+                        width={35}
+                        height={35}
+                        className={styles.userIcon}
+                    />
                 </div>
                 <div className={styles.mainContainer} >
                     <div className={styles.contentContainer}>
