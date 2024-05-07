@@ -20,8 +20,7 @@
     text-decoration: none;
 }
 
-.box:hover,
-.link:hover {
+.box:hover {
     background: rgb(230, 230, 230);
 }
 

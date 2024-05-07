@@ -1,27 +1,16 @@
 .box {
     width: 400px;
-    height: 30px;
-    margin: auto;
-    margin-top: 0;
-    padding-bottom: 5px;
-    align-items: center;
-    background: rgb(240, 240, 240);
-    text-decoration: none;
-    color: black;
-}
-
-.link {
+    height: 55px;
     margin: auto;
     margin-top: 0;
     align-items: center;
     background: rgb(240, 240, 240);
     border-radius: 15px 15px 0 0;
-    border-bottom: 1px solid gray;
+    border-bottom: 2px solid gray;
     text-decoration: none;
 }
 
-.box:hover,
-.link:hover {
+.box:hover {
     background: rgb(230, 230, 230);
 }
 

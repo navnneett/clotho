@@ -53,7 +53,7 @@ export default function Setting() {
 
                 <div className={styles.section}>
                     <p className={styles.sectionHead}>Support and About</p>
-                    <SettingItemTop tittle="Frequently Asked Questions (FAQ)" link="/FAQ"/>
+                    <SettingItemTop tittle="Frequently Asked Questions (FAQ)" link="FAQ"/>
                     <SettingItemMiddle tittle="Report"/>
                     <SettingItemMiddle tittle="Contact us"/>
                     <SettingItemBottom tittle="About us"/>
