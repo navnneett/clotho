@@ -16,19 +16,19 @@ export default function Community() {
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
     var apiKey = process.env.NEXT_PUBLIC_API_KEY;
-    var type = 'fashions';
+    var type = 'clothing';
 
     const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
 
     const GrabNews = () => {
         if (isButtonClicked) {
-            setData(null);
+            setData([]);
             setIsButtonClicked(false);
         } else {
             axios.get(url)
             .then((response) => {
                 // console.clear();
-                setData(response.data.posts);
+                setData(response.data.posts || []);
                 setIsButtonClicked(true);
                 console.log("Fetched data:", response.data.posts);
                 toggleNotification();
@@ -83,40 +83,42 @@ export default function Community() {
                             gap: '20px',
                             justifyContent: 'center',
                             border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '15px',
-                            padding: '15px',
+                            margin: '30px',
+                            padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px',
                             backgroundColor: 'white',
                         }}>
-                        {data && data.map((posts, index) => {
+                        {
+                 
+                            data.map((posts, index) => {
                                 return(
                                     <div>
                                         <div key={index} className={styles.overlay}>
                                             <Image 
                                                 src='/images/news.jpeg'
                                                 alt="workout image"
-                                                height={120}
-                                                width={160}
+                                                height={200}
+                                                width={320}
                                             />
                                             <h3 style={{ 
                                                 fontFamily: 'var(--roboto-slab-text)', 
                                                 color: 'var(--button-highlight-light)', 
-                                                fontSize: 'var(--open-sans-news)', 
+                                                fontSize: 'var(--open-sans-medium)', 
                                                 fontWeight: 'bold' 
-                                            }}>{posts.title}</h3>
+                                            }}>{posts.thread.title}</h3>
                                             <p style={{ 
-                                                fontSize: 'var(--open-sans-news-title)', 
+                                                fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)' 
                                             }}>
-                                                {posts.categories}
+                                                {posts.thread.highlightText}
                                             </p>
                                             <p style={{ 
-                                                fontSize: 'var(--open-sans-news-title)', 
+                                                fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)', 
                                                 textAlign: 'right',
                                             }}>
-                                                {posts.author}
+                                                {posts.thread.author}
                                                 </p>
                                         </div>
                                     </div>

@@ -16,27 +16,27 @@ export default function Community() {
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
     var apiKey = process.env.NEXT_PUBLIC_API_KEY;
-    var type = 'fashions';
+    var type = 'clothing';
+    var date = '2024-04-11';
+    var sortBy = 'publishedAt';
 
     const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
 
-    const GrabNews = () => {
-        if (isButtonClicked) {
-            setData(null);
-            setIsButtonClicked(false);
-        } else {
-            axios.get(url)
-            .then((response) => {
-                // console.clear();
-                setData(response.data.posts);
-                setIsButtonClicked(true);
-                console.log("Fetched data:", response.data.posts);
-                toggleNotification();
-            }).catch(err => {
-                console.log(err)
-            })
+    const grabNews = async () => {
+        setIsButtonClicked(true);
+        setError(null); 
+        try {
+          const response = await axios.get(url);
+          console.clear();
+          setData(response.data.posts); 
+          console.log(response.data.posts);
+        } catch (err) {
+          console.error(err);
+          setError('Failed to fetch data');
+        } finally {
+          setIsButtonClicked(false);
         }
-    };
+      };
     
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Toggle the state
@@ -67,7 +67,7 @@ export default function Community() {
                         viewBox="0 0 24 27"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        onClick={GrabNews}
+                        onClick={grabNews}
                         title={isNotificationOpen ? 'Close News' : 'See News'}
                     >
                         <path d="M19.3333 8.93333C19.3333 7.0945 18.5607 5.33098 17.1855 4.03073C15.8102 2.73047 13.9449 2 12 2C10.0551 2 8.18982 2.73047 6.81455 4.03073C5.43928 5.33098 4.66667 7.0945 4.66667 8.93333C4.66667 17.0222 1 20.6667 1 20.6667H23C23 20.6667 19.3333 17.0222 19.3333 8.93333Z" stroke="#17191F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -83,40 +83,42 @@ export default function Community() {
                             gap: '20px',
                             justifyContent: 'center',
                             border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '15px',
-                            padding: '15px',
+                            margin: '30px',
+                            padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px',
                             backgroundColor: 'white',
                         }}>
-                        {data && data.map((posts, index) => {
+                        {
+                            data && Array.isArray(data.articles) && 
+                            data.articles.filter(article => article.thread.title.toLowerCase().includes('fashion')).map((article, index) => {
                                 return(
                                     <div>
                                         <div key={index} className={styles.overlay}>
                                             <Image 
                                                 src='/images/news.jpeg'
                                                 alt="workout image"
-                                                height={120}
-                                                width={160}
+                                                height={200}
+                                                width={320}
                                             />
                                             <h3 style={{ 
                                                 fontFamily: 'var(--roboto-slab-text)', 
                                                 color: 'var(--button-highlight-light)', 
-                                                fontSize: 'var(--open-sans-news)', 
+                                                fontSize: 'var(--open-sans-medium)', 
                                                 fontWeight: 'bold' 
-                                            }}>{posts.title}</h3>
+                                            }}>{article.thread.title}</h3>
                                             <p style={{ 
-                                                fontSize: 'var(--open-sans-news-title)', 
+                                                fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)' 
                                             }}>
-                                                {posts.categories}
+                                                {article.thread.highlightText}
                                             </p>
                                             <p style={{ 
-                                                fontSize: 'var(--open-sans-news-title)', 
+                                                fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)', 
                                                 textAlign: 'right',
                                             }}>
-                                                {posts.author}
+                                                {article.thread.author}
                                                 </p>
                                         </div>
                                     </div>

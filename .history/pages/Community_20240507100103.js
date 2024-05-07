@@ -83,8 +83,8 @@ export default function Community() {
                             gap: '20px',
                             justifyContent: 'center',
                             border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '15px',
-                            padding: '15px',
+                            margin: '30px',
+                            padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px',
                             backgroundColor: 'white',
@@ -96,23 +96,23 @@ export default function Community() {
                                             <Image 
                                                 src='/images/news.jpeg'
                                                 alt="workout image"
-                                                height={120}
-                                                width={160}
+                                                height={100}
+                                                width={150}
                                             />
                                             <h3 style={{ 
                                                 fontFamily: 'var(--roboto-slab-text)', 
                                                 color: 'var(--button-highlight-light)', 
-                                                fontSize: 'var(--open-sans-news)', 
+                                                fontSize: 'var(--open-sans-medium)', 
                                                 fontWeight: 'bold' 
                                             }}>{posts.title}</h3>
                                             <p style={{ 
-                                                fontSize: 'var(--open-sans-news-title)', 
+                                                fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)' 
                                             }}>
                                                 {posts.categories}
                                             </p>
                                             <p style={{ 
-                                                fontSize: 'var(--open-sans-news-title)', 
+                                                fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)', 
                                                 textAlign: 'right',
                                             }}>
