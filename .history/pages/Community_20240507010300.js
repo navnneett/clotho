@@ -16,9 +16,9 @@ export default function Community() {
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
     var apiKey = process.env.NEXT_PUBLIC_API_KEY;
-    var type = 'fashions';
+    var type = 'clothing';
 
-    const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
+    const url = `https://api.thenewsapi.com/v1/news/all=${type}?api_token=${apiKey}&language=en&limit=3`;
 
     const GrabNews = () => {
         if (isButtonClicked) {
@@ -28,9 +28,9 @@ export default function Community() {
             axios.get(url)
             .then((response) => {
                 // console.clear();
-                setData(response.data.posts);
+                setData(response.data);
                 setIsButtonClicked(true);
-                console.log("Fetched data:", response.data.posts);
+                console.log("Fetched data:", response.data);
                 toggleNotification();
             }).catch(err => {
                 console.log(err)
@@ -83,40 +83,42 @@ export default function Community() {
                             gap: '20px',
                             justifyContent: 'center',
                             border: isButtonClicked ? 'var(--inventory-card-outline)' : 'none',
-                            margin: '15px',
-                            padding: '15px',
+                            margin: '30px',
+                            padding: '30px',
                             fontFamily: '--open-sans-small',
                             marginBottom: '50px',
                             backgroundColor: 'white',
                         }}>
-                        {data && data.map((posts, index) => {
+                        {
+                            data && Array.isArray(data.articles) && 
+                            data.articles.filter(article => article.thread.title.toLowerCase().includes('fashion')).map((d, index) => {
                                 return(
                                     <div>
                                         <div key={index} className={styles.overlay}>
                                             <Image 
                                                 src='/images/news.jpeg'
                                                 alt="workout image"
-                                                height={120}
-                                                width={160}
+                                                height={200}
+                                                width={320}
                                             />
                                             <h3 style={{ 
                                                 fontFamily: 'var(--roboto-slab-text)', 
                                                 color: 'var(--button-highlight-light)', 
-                                                fontSize: 'var(--open-sans-news)', 
+                                                fontSize: 'var(--open-sans-medium)', 
                                                 fontWeight: 'bold' 
-                                            }}>{posts.title}</h3>
+                                            }}>{d.title}</h3>
                                             <p style={{ 
-                                                fontSize: 'var(--open-sans-news-title)', 
+                                                fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)' 
                                             }}>
-                                                {posts.categories}
+                                                {d.description}
                                             </p>
                                             <p style={{ 
-                                                fontSize: 'var(--open-sans-news-title)', 
+                                                fontSize: 'var(--open-sans-small)', 
                                                 fontWeight: 'var(--open-sans-weight)', 
                                                 textAlign: 'right',
                                             }}>
-                                                {posts.author}
+                                                {d.published_at}
                                                 </p>
                                         </div>
                                     </div>

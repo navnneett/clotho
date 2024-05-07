@@ -96,8 +96,8 @@ export default function Community() {
                                             <Image 
                                                 src='/images/news.jpeg'
                                                 alt="workout image"
-                                                height={120}
-                                                width={160}
+                                                height={80}
+                                                width={120}
                                             />
                                             <h3 style={{ 
                                                 fontFamily: 'var(--roboto-slab-text)', 

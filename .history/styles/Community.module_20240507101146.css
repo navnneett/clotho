@@ -128,12 +128,12 @@
     z-index: 100;
     position: fixed;
     display: flex;
-    left: 50vw;
-    top: 90px;
+    left: 51.4vw;
+    top: 70px;
     flex-direction: column;
     align-items:flex-end;
     justify-content: center;
-    width: 220px;
+    width: 200px;
 }
 
 
