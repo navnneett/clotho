@@ -9,7 +9,7 @@ export default function SettingItemTop({
 }) {
     return(
         <>
-            <Link href={link} className={styles.link}>
+            <Link href={link}>
                 <div className={styles.box}>
                     <p className={styles.item}>{tittle}</p>
                 </div>

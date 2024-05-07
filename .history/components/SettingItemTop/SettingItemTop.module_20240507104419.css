@@ -3,11 +3,9 @@
     height: 30px;
     margin: auto;
     margin-top: 0;
-    padding-bottom: 5px;
     align-items: center;
     background: rgb(240, 240, 240);
     text-decoration: none;
-    color: black;
 }
 
 .link {
@@ -20,8 +18,7 @@
     text-decoration: none;
 }
 
-.box:hover,
-.link:hover {
+.box:hover {
     background: rgb(230, 230, 230);
 }
 
