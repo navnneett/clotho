@@ -15,7 +15,7 @@ export default function QuestionsHome() {
 
     useEffect(() => {
         if (playStartQuizSound) {
-            const audio = new Audio('/assets/button-click-quiz.wav');
+            const audio = new Audio('/assets/start-quiz-sound.wav');
             audio.play();
             setPlayStartQuizSound(false);
         }

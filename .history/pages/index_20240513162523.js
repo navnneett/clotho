@@ -11,14 +11,9 @@ import ButtonThree from "@/components/ButtonThree";
 export default function Home() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [playQuizSound, setPlayQuizSound] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); 
-  };
-
-  const handleTakeQuizClick = () => {
-    setPlayQuizSound(true);
+    setIsMenuOpen(!isMenuOpen); // Toggle the state
   };
 
   useEffect(() => {
@@ -80,7 +75,7 @@ export default function Home() {
             </div>
             <div className={styles.quizButtonContainer} tabIndex={3}>
               <Link href="/QuestionsHome">
-              <ButtonThree title="Take Quiz" onClick={handleTakeQuizClick} />
+                <ButtonThree title="Take Quiz"/>
               </Link>
             </div>
         </div>

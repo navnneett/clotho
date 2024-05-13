@@ -15,7 +15,7 @@ export default function QuestionOne() {
     const [quizCompleted, setQuizCompleted] = useState(false); 
 
     const audio = new Audio("/assets/button-click-quiz.wav");
-    
+
     const handleAnswerSelection = (answer) => {
         setSelectedAnswer(answer); 
     };

@@ -14,13 +14,13 @@ export default function Home() {
   const [playQuizSound, setPlayQuizSound] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); 
+    setIsMenuOpen(!isMenuOpen); // Toggle the state
   };
 
   const handleTakeQuizClick = () => {
     setPlayQuizSound(true);
   };
-
+  
   useEffect(() => {
     if (playQuizSound) {
       const audio = new Audio('/assets/button-click-quiz.wav');
