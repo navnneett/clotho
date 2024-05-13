@@ -37,7 +37,7 @@ const QuizEnd = ({ selectedAnswers }) => {
   const resultType = selectedAnswers[selectedAnswers.length - 1];
 
   useEffect(() => {
-    const audio = new Audio('/assets/quiz-end.wav');
+    const audio = new Audio('/assets/quiz-end.wav'); // Replace '/path/to/sound.mp3' with the actual path to your sound file
     audio.play();
   }, []);
 

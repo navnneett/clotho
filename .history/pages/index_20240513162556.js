@@ -11,14 +11,9 @@ import ButtonThree from "@/components/ButtonThree";
 export default function Home() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [playQuizSound, setPlayQuizSound] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); 
-  };
-
-  const handleTakeQuizClick = () => {
-    setPlayQuizSound(true);
+    setIsMenuOpen(!isMenuOpen); // Toggle the state
   };
 
   useEffect(() => {
